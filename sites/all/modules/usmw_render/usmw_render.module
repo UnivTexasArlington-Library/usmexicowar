@@ -3461,7 +3461,7 @@ function topic_links($list)
             
             $id = $topic->field_topic_id[LANGUAGE_NONE][0]['value'];
             
-            $h .= ' <a href="/topic?topic_id='.$id.'">'. $topic->field_topic_name[LANGUAGE_NONE][0]['value'] .'</a>';  
+            $h .= ' <a href="' .site_root(). '/topic?topic_id='.$id.'">'. $topic->field_topic_name[LANGUAGE_NONE][0]['value'] .'</a>';  
             
         }
         
