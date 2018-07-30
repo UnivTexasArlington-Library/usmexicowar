@@ -1584,7 +1584,7 @@ function render_format_bio()
         
         $name = bio_name($bio);
         
-        $link = '/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation . '&ofst=' . $count . '&sort=' . $format_bios->sorting . '&ni=' . $length;
+        $link = site_root() . '/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation . '&ofst=' . $count . '&sort=' . $format_bios->sorting . '&ni=' . $length;
         
         
         $col1 = '<a href="'.$link.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
