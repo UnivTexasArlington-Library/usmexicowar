@@ -1508,7 +1508,7 @@ function render_format()
         $date = content_listing_date($content);
         
         
-        $link = '/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'&format_id='.$format_id . '&ofst=' . $count . '&sort=' . $link_sort . '&ni=' . $length;
+        $link = site_root() . '/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'&format_id='.$format_id . '&ofst=' . $count . '&sort=' . $link_sort . '&ni=' . $length;
         
         
         $col1 = '<a href="'.$link.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
@@ -1740,7 +1740,7 @@ function render_topic_format()
         }
         
         
-        $link = '/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] . '&topic_id='. $topic_id . '&format_id='.$format_id . '&ofst=' . $count . '&ni=' . $length;
+        $link = site_root() . '/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] . '&topic_id='. $topic_id . '&format_id='.$format_id . '&ofst=' . $count . '&ni=' . $length;
         
         
         $col1 = '<a href="'.$link.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
