@@ -2006,7 +2006,7 @@ function render_topic_format_bios()
             $nation = 'US';
         }
         
-        $link = '/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation . '&topic_id='. $topic_id . '&format_id='.$format_id . '&ofst=' . $count . '&ni=' . $length;
+        $link = site_root() . '/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation . '&topic_id='. $topic_id . '&format_id='.$format_id . '&ofst=' . $count . '&ni=' . $length;
 
         $col1 = '<a href="'.$link.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
         
