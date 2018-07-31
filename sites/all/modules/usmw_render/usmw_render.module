@@ -365,9 +365,9 @@ function usmw_render_bios_index()
         }
         
         
-        $col1 = '<a href="/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
+        $col1 = '<a href="'.site_root().'/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
         
-        $col2 = '<a href="/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation.'">';
+        $col2 = '<a href="'.site_root().'/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation.'">';
         $col2 .= $name;
         $col2 .= '</a>';
         
@@ -2899,9 +2899,9 @@ function render_bio_listing($bio)
     }
     
     
-    $col1 = '<a href="/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
+    $col1 = '<a href="'.site_root().'/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
     
-    $col2 = '<a href="/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation.'">';
+    $col2 = '<a href="'.site_root().'/item?bio_id='. $bio->field_bio_id[LANGUAGE_NONE][0]['value'] .'&nation='.$nation.'">';
     $col2 .= $name;
     $col2 .= '</a>';
       
