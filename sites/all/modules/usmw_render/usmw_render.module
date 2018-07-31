@@ -638,12 +638,12 @@ function render_content($c, $type)
     
     if($c->field_content_translation[LANGUAGE_NONE][0]['value'] != '')
     {
-        $links .= '<br><strong><a href="/translation?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Translation</a></strong>';
+        $links .= '<br><strong><a href="'.site_root().'/translation?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Translation</a></strong>';
     }
     
     if($c->field_content_transcription[LANGUAGE_NONE][0]['value'] != '')
     {
-        $links .= '<br><strong><a href="/transcription?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Transcription</a></strong>';
+        $links .= '<br><strong><a href="'.site_root().'/transcription?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Transcription</a></strong>';
     }
     
     //record.php?content_id=65
