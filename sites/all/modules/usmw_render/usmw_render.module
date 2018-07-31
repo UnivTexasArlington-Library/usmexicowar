@@ -1154,7 +1154,7 @@ function render_essay_content($c, $type)
    
    if($is_item)
     {
-        $links .= '<br><strong><a href="/record?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Full Record</a></strong>';
+        $links .= '<br><strong><a href="'.site_root().'/record?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Full Record</a></strong>';
         
     }
     
