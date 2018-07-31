@@ -236,7 +236,7 @@ function usmw_render_topics_index()
         
         else {
             
-           $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+           $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
         }
         
         $h .= '<div class="topic_row" style="clear:both;">';
@@ -350,7 +350,7 @@ function usmw_render_bios_index()
         
         else {
             
-           $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+           $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
         }
         
         
@@ -407,7 +407,7 @@ function usmw_render_contents_index()
         
         else {
             
-           $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+           $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
         }
         
         
@@ -1501,7 +1501,7 @@ function render_format()
         
         else {
             
-           $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+           $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
         }
         
         
@@ -1578,7 +1578,7 @@ function render_format_bio()
         
         else {
             
-           $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+           $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
         }
         
         
@@ -1727,7 +1727,7 @@ function render_topic_format()
         
         else {
             
-           $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+           $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
         }
         
         $date = content_listing_date($content);
@@ -1992,7 +1992,7 @@ function render_topic_format_bios()
         
         else {
             
-           $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+           $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
         }
         
         
@@ -2846,7 +2846,7 @@ function render_content_listing($content, $number_of_columns)
     
     else {
         
-       $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+       $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
     }
     
     
@@ -2884,7 +2884,7 @@ function render_bio_listing($bio)
     
     else {
         
-       $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+       $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
     }
     
     
@@ -2926,7 +2926,7 @@ function render_topic_listing($topic, $number_of_columns)
     
     else {
         
-       $thumb = '/themes/usmw/images/Topic_NoThumb.png';
+       $thumb = site_root().'/themes/usmw/images/Topic_NoThumb.png';
     }
     
     $link = site_root() . '/topic?topic_id='.$topic->field_topic_id[LANGUAGE_NONE][0]['value'];
@@ -3534,7 +3534,7 @@ function content_links_by_topic_id($topic_id)
 function usmw_footer_seal()
 {
     
-    return '<div class="usmw_seal"><img class="no-border-img" src="/themes/usmw/images/decoration.png" alt="U.S. Mexico War logo"></div>';
+    return '<div class="usmw_seal"><img class="no-border-img" src="'.site_root.'/themes/usmw/images/decoration.png" alt="U.S. Mexico War logo"></div>';
     
 }
 
