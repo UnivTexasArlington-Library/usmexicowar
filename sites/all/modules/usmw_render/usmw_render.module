@@ -244,7 +244,7 @@ function usmw_render_topics_index()
         
         $h .= '<div style="display:inline-block;vertical-align:middle;">';
         
-        $h .= '<a href="/topic?topic_id='. $topic->field_topic_id[LANGUAGE_NONE][0]['value'] .'">';
+        $h .= '<a href="'.site_root().'/topic?topic_id='. $topic->field_topic_id[LANGUAGE_NONE][0]['value'] .'">';
         
         
         $h .= $topic->field_topic_name[LANGUAGE_NONE][0]['value'];
@@ -986,9 +986,9 @@ function render_topic_intro($major_topic)
         }
         
         
-        $col1 = '<div class="col1 center_wrapper"><a href="/topic?topic_id='. $t->field_topic_id[LANGUAGE_NONE][0]['value'] .'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a></div>';
+        $col1 = '<div class="col1 center_wrapper"><a href="'.site_root().'/topic?topic_id='. $t->field_topic_id[LANGUAGE_NONE][0]['value'] .'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a></div>';
         
-        $col2 = '<a href="/topic?topic_id='. $t->field_topic_id[LANGUAGE_NONE][0]['value'] .'">';
+        $col2 = '<a href="'.site_root().'/topic?topic_id='. $t->field_topic_id[LANGUAGE_NONE][0]['value'] .'">';
         $col2 .= $t->field_topic_name[LANGUAGE_NONE][0]['value'];
         $col2 .= '</a>';
         
