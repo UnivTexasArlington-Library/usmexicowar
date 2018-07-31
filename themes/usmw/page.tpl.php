@@ -75,7 +75,7 @@
 
 
 <!-- usmw font location -->
-<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 
 
 
