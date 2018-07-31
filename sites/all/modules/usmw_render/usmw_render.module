@@ -1268,7 +1268,7 @@ function render_bio_content($b, $type)
     
     if($is_item)
     {
-        $links .= '<br><strong><a href="/record?bio_id='.(string)$b->field_bio_id[LANGUAGE_NONE][0]['value'].'" class="view">View Full Record</a></strong>';
+        $links .= '<br><strong><a href="'. site_root(). '/record?bio_id='.(string)$b->field_bio_id[LANGUAGE_NONE][0]['value'].'" class="view">View Full Record</a></strong>';
         
     }
     
