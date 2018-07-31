@@ -411,9 +411,9 @@ function usmw_render_contents_index()
         }
         
         
-        $col1 = '<a href="/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
+        $col1 = '<a href="'.site_root().'/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
         
-        $col2 = '<a href="/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'">';
+        $col2 = '<a href="'.site_root().'/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'">';
         $col2 .= '#' . $content->field_content_id[LANGUAGE_NONE][0]['value'] . ' ' . $content->field_content_title[LANGUAGE_NONE][0]['value'];
         $col2 .= '</a>';
         
@@ -2851,11 +2851,11 @@ function render_content_listing($content, $number_of_columns)
     
     
     
-    $col1 = '<a href="/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'&format_id='.$format_id.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
+    $col1 = '<a href="'.site_root().'/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'&format_id='.$format_id.'"><img class="thumbnail-img" src="'.$thumb .'" width="150"></a>';
     
     $col2 = '';
     
-    $col2 .= '<a href="/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'&format_id='.$format_id.'">';
+    $col2 .= '<a href="'.site_root().'/item?content_id='. $content->field_content_id[LANGUAGE_NONE][0]['value'] .'&format_id='.$format_id.'">';
     $col2 .= $content->field_content_title[LANGUAGE_NONE][0]['value'];
     $col2 .= '</a>';
     
