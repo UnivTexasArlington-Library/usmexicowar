@@ -3534,7 +3534,7 @@ function content_links_by_topic_id($topic_id)
 function usmw_footer_seal()
 {
     
-    return '<div class="usmw_seal"><img class="no-border-img" src="'.site_root.'/themes/usmw/images/decoration.png" alt="U.S. Mexico War logo"></div>';
+    return '<div class="usmw_seal"><img class="no-border-img" src="'.site_root().'/themes/usmw/images/decoration.png" alt="U.S. Mexico War logo"></div>';
     
 }
 
