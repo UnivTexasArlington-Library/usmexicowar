@@ -1040,7 +1040,7 @@ function now()
 { return new Date().getTime(); }
 
 function site_root()
-{ return 'https://library-test.uta.edu/usmexicowar/'; }
+{ return 'https://library.uta.edu/usmexicowar/'; }
 
 
 
