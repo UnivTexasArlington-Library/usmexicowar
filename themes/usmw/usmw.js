@@ -1045,7 +1045,7 @@ function now()
 { return new Date().getTime(); }
 
 function site_root()
-{ return 'http://drupaltest.space/'; }
+{ return 'https://library.uta.edu/usmexicowar/'; }
 
 
 
