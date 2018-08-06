@@ -63,11 +63,16 @@ function create_root_menu(id)
           
       }
       
-      if(m.sublinks > 0)
+      else if(m.sublinks > 0)
       {
           m.link = '#';
           //label += arrow_down();
           
+      }
+      
+      else 
+      {
+          m.link = site_root() + m.link;
       }
       
       
@@ -956,7 +961,7 @@ function home_page_slideshow()
        _home_page_slides.previous_slide_html = _home_page_slides.current_slide_html;
    }
    
-   var slide_update = '<div class="i"><a href="'+s.link+'"><img src="https://library-test.uta.edu/usmexicowar/themes/usmw/includes/'+s.img+'"></a></div>';
+   var slide_update = '<div class="i"><a href="'+s.link+'"><img src="'+site_root()+'themes/usmw/includes/'+s.img+'"></a></div>';
    
    _home_page_slides.current_slide_html = slide_update;
    
@@ -1040,7 +1045,7 @@ function now()
 { return new Date().getTime(); }
 
 function site_root()
-{ return 'https://library.uta.edu/usmexicowar/'; }
+{ return 'http://drupaltest.space/'; }
 
 
 
