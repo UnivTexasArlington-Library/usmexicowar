@@ -1726,11 +1726,11 @@ td.views-field.views-field-field-bio-surname.active, td.views-field.views-field-
 	background-color:#f5e2b1;
 }
 
-th.views-field.views-field-field-bio-nationality, th.views-field.views-field-field-bio-surname {
+.views-field.views-field-field-bio-nationality, views-field.views-field-field-bio-surname {
 	vertical-align:bottom;
 }
 
-ul.facetapi-facetapi-checkbox-links > li {
+.facetapi-facetapi-checkbox-links li {
 	list-style-type:none;
 	margin:0;
 	padding:0;
