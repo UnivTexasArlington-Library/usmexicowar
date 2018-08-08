@@ -1731,6 +1731,7 @@ td.views-field.views-field-field-bio-surname.active, td.views-field.views-field-
 }
 
 .facetapi-facetapi-checkbox-links li {
+	list-style-image:none;
 	list-style-type:none;
 	margin:0;
 	padding:0;
