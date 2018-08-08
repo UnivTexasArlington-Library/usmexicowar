@@ -1,0 +1,553 @@
+<link href="/usmexicowar/themes/usmw/util/jscrollpane.css" rel="stylesheet">
+<link href="/usmexicowar/themes/usmw/usmw-home.css?t=172322" rel="stylesheet">
+
+<script type="text/javascript" src="/usmexicowar/misc/jquery.js?v=1.4.4"></script>
+
+<script src="/usmexicowar/themes/usmw/util/jscrollpane.js"></script>
+
+<!-- originally from includes/head-home-page.php -->
+
+
+
+<style> 
+
+.jspVerticalBar 
+{ 
+    display:none; 
+    
+}
+.jspPane 
+{
+    margin-left:0px !important;
+}
+
+</style>
+
+
+<script type="text/javascript">
+$(window).load(function () {
+        $('#home-timeline').bind(
+				'jsp-scroll-x',
+				function(event, scrollPositionX, isAtLeft, isAtRight)
+				{
+								$('.timeline-div').hide();
+				}
+			).jScrollPane({
+		showArrows: false,
+			horizontalGutter: -10,
+			horizontalDragMaxWidth: 110
+					});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // hide all images except the first
+    $('#image div').hide().eq(0).show();
+
+    (function(quotes) {
+        var i = 0;
+        if (!quotes.length) {
+            return false;
+        }
+        function nextQuote() {
+            quotes.eq(i).animate({opacity:'toggle'}, 1000)
+            if (++i >= quotes.length) {
+                i = 0;
+            };
+            quotes.eq(i).animate({opacity:'toggle'}, 1000)
+            setTimeout(nextQuote, 5000);
+        }
+        nextQuote();
+    }($('#image').children()));
+});
+  
+</script>
+
+<SCRIPT TYPE="text/javascript">
+last_clicked = '';
+function change(d)
+{
+	var div = d + "_ex";
+	var onediv = document.getElementById(div);
+
+	
+var divs=['06_1844','11_1844','12_1844','01_1845','03_1845','04_1845','07_1845','11_1845','12_1845','01_1846','03_1846','04_1846','05_1846','06_1846','07_1846','08_1846','09_1846','10_1846','11_1846','12_1846','01_1847','02_1847','03_1847','04_1847','05_1847','08_1847','09_1847','10_1847','12_1847','01_1848','02_1848','03_1848','05_1848','06_1848','07_1848','08_1848','11_1848'];
+for (var i=0;i<divs.length;i++)
+  {
+	  var clickid = divs[i] + "_ex";
+
+if (div != clickid)
+  {
+    document.getElementById(divs[i] + "_ex").style.display='none';
+	var data = $("#" + divs[i]).data('maphilight');
+	data.neverOn = true;
+	$("#" + divs[i]).data('maphilight', data);
+    } 
+	else if (div = clickid) {
+		onediv.style.display = 'block';
+		//alert (divs[i]);
+		var data = $("#" + d).data('maphilight');
+		var currentdiv = divs[i];
+		data.alwaysOn = true;
+		$("#" + currentdiv).data('maphilight', data).trigger('alwaysOn.maphilight');
+	}
+	if (last_clicked != '') {
+	var data = $("#" + divs[i]).data('maphilight');
+	data.alwaysOn = false;
+	$("#" + divs[i]).data('maphilight', data);
+	}
+	else {
+		var data = $("#" + divs[i]).data('maphilight');
+	data.alwaysOn = false;
+	$("#" + divs[i]).data('maphilight', data);
+	}
+}
+
+
+last_clicked = d;
+
+$(".close").click( function() {
+	$(this).parent().css("display","none");
+	var data = $("#" + d).data('maphilight');
+	data.alwaysOn = false;
+	$("#" + d).data('maphilight', data).trigger('alwaysOn.maphilight');	
+});
+
+
+}
+</script>
+
+
+<!-- above originally from includes/head-home-page.php -->
+
+
+
+
+
+
+<script type="text/javascript" src="/usmexicowar/themes/usmw/util/jquery.maphilight.js"></script>
+<script>$(function() {
+    $('.map').maphilight();
+});</script>
+
+
+
+<div id="timeline_conversion_wrap">
+
+
+
+<div id="06_1844_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size:12px;padding-left:10px;padding-top:10px;padding-right:10px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1844
+    <ul>
+    	<li>June 8 - U.S. Senate defeats treaty of annexation with Texas</li>
+    </ul>
+</div>
+
+<div id="11_1844_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1844
+    <ul>
+    	<li>November - James K. Polk defeats Henry Clay to become eleventh president of the United States</li>
+    </ul>
+</div>
+
+<div id="12_1844_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;height:125px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+        <img src="/usmexicowar/usmw_includes/includes/timeline-images/12_44_1.png" style="float:left;margin-left:-200px; padding-right:10px;"/>
+    1844
+    <ul>
+    	<li>December 5-7 - Santa Anna deposed; José Joaquín Herrera declared interim president of Mexico</li>
+    </ul>
+</div>
+
+<div id="01_1845_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1845
+    <ul>
+    	<li>January 2-10 - Santa Anna attacks Puebla</li><br/>
+        <li>January 15 - Santa Anna captured by government forces</li>
+    </ul>
+</div>
+
+<div id="03_1845_ex" style="display:none;background-color:rgba(0,0,0,.7); max-width: 500px;max-height:250px;margin-top:50px;margin-left: 200px;z-index:1000;position:absolute;color: #ccb58a;	font-size: 12px; padding-left: 10px; padding-top:10px;padding-right: 10px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    <img src="/usmexicowar/usmw_includes/includes/timeline-images/03_45_1.png" style="float:left;margin-left:-150px; padding-right:10px;"/>
+    1845
+    <ul>
+    	<li>March 1 - U.S. President John Tyler signs the Brown Resolution, offering Texas terms of annexation</li><br/>
+        <li>March 4 - James Knox Polk is inaugurated as the eleventh president of the United States</li><br/>
+        <li>March 31 - In response to passage of the Brown Resolution, Mexico's minister to the U.S., Juan N. Almonte, requests his passports, breaking off diplomatic relations between the two countries</li>
+    </ul>
+</div>
+
+<div id="04_1845_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;height:150px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+        <img src="/usmexicowar/usmw_includes/includes/timeline-images/04_45_1.png" style="float:left;margin-left:-170px; padding-right:20px;margin-top:-40px"/>
+    1845
+    <ul>
+    	<li>April 5 - Mexican president Herrera sends Antonio López de Santa Anna into exile in Cuba</li>
+    </ul>
+</div>
+
+<div id="07_1845_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1845
+    <ul>
+    	<li>July - President James K. Polk orders General Zachary Taylor to march to <a href="topic?topic_id=5" target="_blank" style="color: #ccb58a;">Corpus Christi</a> to defend Texas frontier, and dispatches a naval squadron to the Gulf of Mexico</li><BR>
+        <li>July 4 - Texas convention votes in favor of <a href="item?content_id=181" target="_blank" style="color: #ccb58a;"><u>annexation to the United States</u></a></li>
+    </ul>
+</div>
+
+<div id="11_1845_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1845
+    <ul>
+    	<li>November - U.S. minister <u><a href="item?content_id=180" target="_blank" style="color: #ccb58a;">John Slidell arrives in Mexico</u></a></li>
+    </ul>
+</div>
+
+<div id="12_1845_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1845
+    <ul>
+    	<li>December 14 - San Luís Potosí garrison calls for the overthrow of Herrera</li>
+        <BR>
+        <li>December 30 - <u><a href="item?content_id=179" target="_blank" style="color: #ccb58a;">Government of José Joaquín Herrera collapses in Mexico City</u></a></li>
+    </ul>
+</div>
+
+<div id="01_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1846
+    <ul>
+    	<li>January 1 - The Yucatán declares its independence from Mexico and its neutrality in the war with the United States</li><BR>
+        <li>January 4 - General Mariano Paredes takes the oath of office as president in Mexico City</li><BR>
+        <li>January 13 - President Polk orders Zachary Taylor to march from Corpus Christi to the Rio Grande and orders a blockade of Vera Cruz</li>
+    </ul>
+</div>
+
+<div id="03_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;height:150px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+            <img src="/usmexicowar/usmw_includes/includes/timeline-images/03_46_1.png" style="float:left;margin-left:-170px; padding-right:20px;margin-top:-40px"/>
+    1846
+    <ul>
+    	<li>March - Taylor marches to Rio Grande; John Slidell leaves Mexico</li><BR>
+        <li>March 18 - In Matamoros, Mexican General Francisco Mejia issues a proclamation threatening hostilities against U.S. troops</li>
+    </ul>
+</div>
+
+<div id="04_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;height:150px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    <img src="/usmexicowar/usmw_includes/includes/timeline-images/04_46_1.png" style="float:left;margin-left:-170px; padding-right:20px;margin-top:-40px"/>
+    1846
+    <ul>
+    	<li>April - General Mariano Arista takes command of the Mexican Army of the North</li><BR>
+        <li>April 25 - <a href="topic?topic_id=7" target="_blank" style="color: #ccb58a;">Thornton Affair</a> - U.S. dragoons attacked by Mexican cavalry on east bank of Rio Grande</li>
+    </ul>
+</div>
+
+<div id="05_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:50px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:500px;height:250px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+        <img src="/usmexicowar/usmw_includes/includes/timeline-images/05_46_1.png" style="float:left;margin-left:-170px; padding-right:20px;margin-top:-40px"/>
+    1846
+    <ul>
+    	<li>May 3-8 - <a href="topic?topic_id=8" target="_blank" style="color: #ccb58a;">Siege of Fort Brown</a></li><BR>
+        <li>May 8 - Battle of <a href="topic?topic_id=9" target="_blank" style="color: #ccb58a;">Palo Alto</a>; John Slidell meets with President Polk</li><BR>
+        <li>May 9 - News arrives in Washington of the Thornton Affair; Battle of <a href="topic?topic_id=9" target="_blank" style="color: #ccb58a;">Resaca de la Palma</a></li><BR>
+        <li>May 11 - President's war message read to Congress</li><BR>
+        <li>May 13 - United States declares war against Mexico</li><BR>
+        <li>May 18 - U.S. troops occupy Matamoros</li>
+    </ul>
+</div>
+
+<div id="06_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:250px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:500px;height:125px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+                <img src="/usmexicowar/usmw_includes/includes/timeline-images/06_46_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1846
+    <ul>
+    	<li>June 14 - <a href="topic?topic_id=14" target="_blank" style="color: #ccb58a;">Bear Flag revolt</a> declared in California</li>
+    </ul>
+</div>
+
+<div id="07_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:80px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:525px;height:225px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+                    <img src="/usmexicowar/usmw_includes/includes/timeline-images/07_46_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:30px"/>
+    1846
+    <ul>
+    	<li>July 7 - U.S. naval forces occupy Monterey, California</li><BR>
+        <li>July 14 - U.S. forces occupy Camargo, Tamaulipas</li><BR>
+        <li>July 28 - General Paredes deposed in Mexico City by Mariano Salas</li><BR>
+        <li>July 30 - General Taylor issues orders for movement of troops from Fort Brown to Camargo</li>
+    </ul>
+</div>
+
+<div id="08_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:65px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:700px;height:225px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+                    <img src="/usmexicowar/usmw_includes/includes/timeline-images/08_46_1.png" style="float:left;margin-left:-170px; padding-right:40px;"/>
+    1846
+    <ul>
+    	<li>August - Pedro de Ampudia appointed commander of the Army of the North</li><BR>
+        <li>August 16 - Santa Anna returns to Mexico from exile in Cuba</li><BR>
+        <li>August 18 - U.S. forces under General Stephen W. Kearny occupy Santa Fe, New Mexico. <a href="topic?topic_id=15" target="_blank" style="color: #ccb58a;">Kearny's March</a></li><BR>
+        <li>August 19 - U.S. troops at Camargo begins march to Monterrey, Nuevo Leon</li>
+    </ul>
+</div>
+
+<div id="09_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:450px;height: 125px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/09_46_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1846
+    <ul>
+    	<li>September 21-24 - <a href="topic?topic_id=11" target="_blank" style="color: #ccb58a;"><u>Battle of Monterrey</u></a></li>
+    </ul>
+</div>
+
+<div id="10_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1846
+    <ul>
+    	<li>October 7 - Battle of Dominguez Rancho, Southern California</li>
+    </ul>
+</div>
+
+<div id="11_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:450px;height:190px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+                    <img src="/usmexicowar/usmw_includes/includes/timeline-images/11_46_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:60px"/>
+    1846
+    <ul>
+    	<li>November 14 - U.S. Navy seizes Tampico</li><BR>
+        <li>November 16 - U.S. forces occupy Saltillo; Battle of Natividad, Northern California</li><BR>
+        <li>November 17 - Polk orders a seaborne invasion of Vera Cruz</li>
+    </ul>
+</div>
+
+<div id="12_1846_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:450px;height:200px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/12_46_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1846
+    <ul>
+    	<li>December 6 - Battle of San Pasqual, California</li><BR>
+        <li>December - Valentín Gómez Farías assumes the duties of acting president</li><BR>
+        <li>December 25 - Battle of El Brazito, New Mexico</li>
+    </ul>
+</div>
+
+<div id="01_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:25px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:650px;height:290px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/01_47_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:35px;"/>
+    1847
+    <ul>
+    	<li>January 2 - Battle of Santa Clara, California</li><BR>
+        <li>January 8 - Battle of Rio San Gabriel (Los Angeles), California</li><BR>
+        <li>January 9 - Battle of La Mesa (Los Angeles), California</li><BR>
+        <li>January 11 - Acting President Valentín Goméz Farías issues edict confiscating church property</li><BR>
+        <li>January 19 - <a href="topic?topic_id=17" target="_blank" style="color: #ccb58a;">Taos Revolt</a> begins; U.S. territorial governor Charles Bent killed</li><BR>
+        <li>January 24 - Battles of Cañada and Mora, New Mexico</li><BR>
+        <li>January 29 - Battle of Emudo Pass, New Mexico</li>
+    </ul>
+</div>
+
+<div id="02_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:500px;height:175px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/02_47_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1847
+    <ul>
+    	<li>February 3-4 - Battle of Pueblo de Taos, New Mexico</li><BR>
+        <li>February 22-23 - <a href="topic?topic_id=13" target="_blank" style="color: #ccb58a;">Battle of Buena Vista (Angostura)</a></li><BR>
+        <li>February 26 - <a href="topic?topic_id=32" target="_blank" style="color: #ccb58a;"><u>Polkos Revolt</u></a> begins in Mexico City</li><BR>
+        <li>February 28 - Battle of the Sacramento, Northern Mexico</li>
+    </ul>
+</div>
+
+<div id="03_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:500px;height:175px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/03_47_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1847
+    <ul>
+    	<li>March 9 - 10,000 U.S. troops land on beaches by Navy at Veracruz</li><BR>
+        <li>March 21 - <a href="topic?topic_id=32" target="_blank" style="color: #ccb58a;"><u>Polkos Revolt</u></a> ends</li><BR>
+        <li>March 22-27 - <a href="topic?topic_id=21" target="_blank" style="color: #ccb58a;">Siege and Occupation of Veracruz</a></li><BR>
+        <li>March 29 - Mexican forces at Veracruz surrender</li>
+    </ul>
+</div>
+
+<div id="04_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:400px;height:150px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/04_47_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1847
+    <ul>
+    	<li>April 18 - Battle of <a href="topic?topic_id=23" target="_blank" style="color: #ccb58a;">Cerro Gordo</a>; Battle of Tuxpan</li>
+    </ul>
+</div>
+
+<div id="05_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1847
+    <ul>
+    	<li>May 15 - Scott occupies Puebla</li><BR>
+        <li>May 20 – Santa Anna assumes the presidency</li>
+    </ul>
+</div>
+
+<div id="08_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;height:150px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/08_47_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1847
+    <ul>
+    	<li>August 19 – <a href="topic?topic_id=25" target="_blank" style="color: #ccb58a;">Battle of Contreras (Padierna)</a></li><BR>
+        <li>August 20 - <a href="topic?topic_id=25" target="_blank" style="color: #ccb58a;">Battle at Churubusco</a>; San Patricio battalion captured</li>
+    </ul>
+</div>
+
+<div id="09_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:50px;margin-left:125px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:800px;height:200px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/09_47_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-20px"/>
+    1847
+    <ul>
+    	<li>September 8 - Battle of Molino Del Rey</li><BR>
+        <li>September 13 - Battle of <a href="topic?topic_id=26" target="_blank" style="color: #ccb58a;">Chapultepec</a></li><BR>
+        <li>September 13-14 - Battle for Mexico City</li><BR>
+        <li>September 14 - <u><a href="item?content_id=178" target="_blank" style="color: #ccb58a;">U.S. forces under General Winfield Scott</a> occupy Mexico City;</u> <a href="topic?topic_id=27" target="_blank" style="color: #ccb58a;">Siege of Puebla</a> begins</li><BR>
+        <li>September 15 - Santa Anna resigns as president of Mexico</li>
+    </ul>
+</div>
+
+<div id="10_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:400px;height:150px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/10_47_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1847
+    <ul>
+    	<li>October 9 - Battle of <a href="topic?topic_id=27" target="_blank" style="color: #ccb58a;">Huamantla</a></li><BR>
+        <li>October 12 - Siege of Puebla ends</li>
+    </ul>
+</div>
+
+<div id="12_1847_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1847
+    <ul>
+    	<li>December 22 - Abraham Lincoln presents his “spot resolutions” in Congress, challenging Polks' reasons for declaring war against Mexico</li>
+    </ul>
+</div>
+
+<div id="01_1848_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1848
+    <ul>
+		<li>January 24 - Gold discovered at Sutter’s Mill, Northern California </li>
+    </ul>
+</div>
+
+<div id="02_1848_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;height:150px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/02_48_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1848
+    <ul>
+		<li>February 2 - <a href="topic?topic_id=38" target="_blank" style="color: #ccb58a;">Treaty of Guadalupe Hidalgo</a> signed</li><BR>
+        <li>February 4 - Last battle of the war fought at Santa Cruz de Rosales, New Mexico</li>
+    </ul>
+</div>
+
+<div id="03_1848_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:450px;height:150px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/03_48_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1848
+    <ul>
+		<li>March - Santa Anna departs for exile in Jamaica</li><BR>
+        <li>March 10 - U.S. Senate ratifies Treaty of Guadalupe Hidalgo, with amendments</li>
+    </ul>
+</div>
+
+<div id="05_1848_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;height:125px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+               <img src="/usmexicowar/usmw_includes/includes/timeline-images/05_48_1.png" style="float:left;margin-left:-170px; padding-right:40px;margin-top:-40px"/>
+    1848
+    <ul>
+		<li>May 25 - Mexican Congress ratifies Treaty of Guadalupe Hidalgo</li>
+    </ul>
+</div>
+
+<div id="06_1848_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1848
+    <ul>
+		<li>June 3 - José Joaquín Herrera elected to two-year presidential term</li>
+    </ul>
+</div>
+
+<div id="07_1848_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1848
+    <ul>
+		<li>July 4 - President Polk formally announces ratification of Treaty of Guadalupe Hidalgo</li>
+    </ul>
+</div>
+
+<div id="08_1848_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;width:450px;height:80px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1848
+    <ul>
+		<li>August 2 - Last U.S. troops leave Mexico</li>
+    </ul>
+</div>
+
+<div id="11_1848_ex" style="display:none;background-color:rgba(0,0,0,.7);margin-top:100px;margin-left:200px;z-index:1000;position:absolute;color: #ccb58a;font-size: 12px;padding-left:10px;padding-top:10px;padding-right:10px;max-width:400px;" class="timeline-div">
+	<a class="close" href="#">X</a>
+    1848
+    <ul>
+		<li>November - <a href="topic?topic_id=39" target="_blank" style="color: #ccb58a;">Election of 1848</a>: General Zachary Taylor elected 12th U.S. president</li>
+    </ul>
+</div>
+  
+
+<div id="home-timeline">
+<img src="/usmexicowar/themes/usmw/images/Timeline-rev-1_2014a.png" usemap="#timeline" class="map" height="375" width="5544"/>
+<map name="timeline">
+	<area id="06_1844" shape="rect" coords="966,335,1041,365" alt="06_1844" onClick="change('06_1844')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}' title="June 1844" />
+	<area id="11_1844" shape="rect" coords="1340,335,1410,365" alt="11_1844" onClick="change('11_1844')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}' />
+	<area id="12_1844" shape="rect" coords="1413,335,1480,365" alt="12_1844" onClick="change('12_1844')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}' />
+	<area id="01_1845" shape="rect" coords="1480,335,1550,365" alt="01_1845" onClick="change('01_1845')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="03_1845" shape="rect" coords="1641,335,1711,365" alt="03_1845" onClick="change('03_1845')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="04_1845" shape="rect" coords="1736,335,1806,365" alt="04_1845" onClick="change('04_1845')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="07_1845" shape="rect" coords="2000,335,2072,365" alt="07_1845" onClick="change('07_1845')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="11_1845" shape="rect" coords="2331,335,2408,365" alt="11_1845" onClick="change('11_1845')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="12_1845" shape="rect" coords="2425,335,2491,365" alt="12_1845" onClick="change('12_1845')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="01_1846" shape="rect" coords="2500,335,2561,365" alt="01_1846" onClick="change('01_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="03_1846" shape="rect" coords="2660,335,2728,365" alt="03_1846" onClick="change('03_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="04_1846" shape="rect" coords="2753,335,2819,365" alt="04_1846" onClick="change('04_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="05_1846" shape="rect" coords="2850,335,2917,365" alt="05_1846" onClick="change('05_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="06_1846" shape="rect" coords="2937,335,3002,365" alt="06_1846" onClick="change('06_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="07_1846" shape="rect" coords="3019,335,3086,365" alt="07_1846" onClick="change('07_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="08_1846" shape="rect" coords="3096,335,3161,365" alt="08_1846" onClick="change('08_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="09_1846" shape="rect" coords="3179,335,3231,365" alt="09_1846" onClick="change('09_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="10_1846" shape="rect" coords="3274,335,3339,365" alt="10_1846" onClick="change('10_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="11_1846" shape="rect" coords="3355,335,3416,365" alt="11_1846" onClick="change('11_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="12_1846" shape="rect" coords="3440,335,3506,365" alt="12_1846" onClick="change('12_1846')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="01_1847" shape="rect" coords="3519,335,3572,365" alt="01_1847" onClick="change('01_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="02_1847" shape="rect" coords="3595,335,3650,365" alt="02_1847" onClick="change('02_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="03_1847" shape="rect" coords="3680,335,3746,365" alt="03_1847" onClick="change('03_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="04_1847" shape="rect" coords="3770,335,3836,365" alt="04_1847" onClick="change('04_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="05_1847" shape="rect" coords="3866,335,3934,365" alt="05_1847" onClick="change('05_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="08_1847" shape="rect" coords="4115,335,4176,365" alt="08_1847" onClick="change('08_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="09_1847" shape="rect" coords="4190,335,4257,365" alt="09_1847" onClick="change('09_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="10_1847" shape="rect" coords="4292,335,4350,365" alt="10_1847" onClick="change('10_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="12_1847" shape="rect" coords="4463,335,4520,365" alt="12_1847" onClick="change('12_1847')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="01_1848" shape="rect" coords="4541,335,4600,365" alt="01_1848" onClick="change('01_1848')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="02_1848" shape="rect" coords="4614,335,4676,365" alt="02_1848" onClick="change('02_1848')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="03_1848" shape="rect" coords="4700,335,4768,365" alt="03_1848" onClick="change('03_1848')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="05_1848" shape="rect" coords="4890,335,4956,365" alt="05_1848" onClick="change('05_1848')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="06_1848" shape="rect" coords="4976,335,5041,365" alt="06_1848" onClick="change('06_1848')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="07_1848" shape="rect" coords="5066,335,5121,365" alt="07_1848" onClick="change('07_1848')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="08_1848" shape="rect" coords="5133,335,5202,365" alt="08_1848" onClick="change('08_1848')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+	<area id="11_1848" shape="rect" coords="5391,335,5455,365" alt="11_1848" onClick="change('11_1848')" href="#" data-maphilight='{"strokeColor":"ccb58a","strokeWidth":5}'/>
+</map>
+
+</div>
+
+
+</div>
+  
+  
+  
