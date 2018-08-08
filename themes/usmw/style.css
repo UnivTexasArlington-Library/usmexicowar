@@ -1722,7 +1722,7 @@ ol.tree	li {
 	margin-left: 25px;
 }
 	
-td.views-field.views-field-field-bio-surname.active {
+td.views-field.views-field-field-bio-surname.active, td.views-field.views-field-field-bio-nationality.active {
 	background-color:#f5e2b1;
 }
 
