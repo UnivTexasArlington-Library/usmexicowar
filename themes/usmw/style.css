@@ -1720,5 +1720,10 @@ ol.tree	li {
 #sidebar-first {
 	float:left;
 	margin-left: 25px;
+}
+	
+td.views-field.views-field-field-bio-surname.active {
+	background-color:#f5e2b1;
+}
 
 /************************************************/
