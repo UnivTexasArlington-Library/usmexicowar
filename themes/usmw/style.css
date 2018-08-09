@@ -1715,7 +1715,7 @@ ol.tree	li {
 }
 
 /************************************************/
-/* STYLES FOR "PEOPLE" PAGE - AJL */
+/* STYLES FOR FACET PAGE - AJL */
 
 #sidebar-first {
 	float:left;
@@ -1737,7 +1737,11 @@ th.views-field.views-field-field-bio-nationality, th.views-field.views-field-fie
 	padding:0;
 }
 a.facetapi-checkbox {
-	text-decoration:none;
+	text-decoration:none !important;
+}
+
+.block-facetapi h2 {
+	font-size:14px;
 }
 
 /************************************************/
