@@ -3918,7 +3918,6 @@ function get_menu_edits()
 	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_birth_date&sort=asc', 'Sorted by Birth Date'));
 
     
-    
     //documents
     
     $browse_documents = new stdClass();
