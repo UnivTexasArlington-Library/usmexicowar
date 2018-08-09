@@ -3905,11 +3905,11 @@ function get_menu_edits()
     
     
     //people
-    $browse_people = new stdClass();
-    $browse_people->label = 'People';
-    $browse_people->parent = 'Browse';
-    $browse_people->append = 'Essays';
-    $browse_people->leaf = [];
+    //$browse_people = new stdClass();
+    //$browse_people->label = 'People';
+    //$browse_people->parent = 'Browse';
+    //$browse_people->append = 'Essays';
+    //$browse_people->leaf = [];
     
     //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
     //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
