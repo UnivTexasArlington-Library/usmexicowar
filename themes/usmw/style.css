@@ -1722,11 +1722,11 @@ ol.tree	li {
 	margin-left: 25px;
 }
 	
-td.views-field.views-field-field-bio-surname.active, td.views-field.views-field-field-bio-nationality.active {
+td.views-field.views-field-field-bio-surname.active, td.views-field.views-field-field-bio-nationality.active, td.views-field.views-field-field-bio-birth-date.active  {
 	background-color:#f5e2b1;
 }
 
-th.views-field.views-field-field-bio-nationality, th.views-field.views-field-field-bio-surname {
+th.views-field.views-field-field-bio-nationality, th.views-field.views-field-field-bio-surname, th.views-field.views-field-field-bio-birth-date {
 	vertical-align:bottom;
 }
 
