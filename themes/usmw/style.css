@@ -1741,7 +1741,7 @@ a.facetapi-checkbox {
 }
 
 .block-facetapi h2 {
-	font-size:14px;
+	font-size:14px !important;
 }
 
 /************************************************/
