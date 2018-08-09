@@ -3900,20 +3900,23 @@ function get_menu_edits()
     $browse->leaf = [];
     
     array_push($browse->leaf, usmw_get_menu_element('format', 1)); //essays
-	array_push($browse->leaf, usmw_get_menu_element('format', 10)); //people
-    array_push($browse->leaf, usmw_get_menu_element('format', 8)); //images
+	array_push($browse->leaf, usmw_get_menu_element('format', 8)); //images
     array_push($browse->leaf, usmw_get_menu_element('format', 9)); //maps
     
     
     //people
-    //$browse_people = new stdClass();
-    //$browse_people->label = 'People';
-    //$browse_people->parent = 'Browse';
-    //$browse_people->append = 'Essays';
-    //$browse_people->leaf = [];
+    $browse_people = new stdClass();
+    $browse_people->label = 'People';
+    $browse_people->parent = 'Browse';
+    $browse_people->append = 'Essays';
+    $browse_people->leaf = [];
     
     //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
     //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_surname&sort=asc', 'Sorted by Last Name'));
+    array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_nationality&sort=asc', 'Sorted by Nationality'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_birth_date&sort=asc', 'Sorted by Birth Date'));
+
     
     
     //documents
