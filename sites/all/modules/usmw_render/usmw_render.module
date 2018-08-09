@@ -3900,15 +3900,16 @@ function get_menu_edits()
     $browse->leaf = [];
     
     array_push($browse->leaf, usmw_get_menu_element('format', 1)); //essays
+	array_push($browse->leaf, usmw_get_menu_element('format', 10)); //people
     array_push($browse->leaf, usmw_get_menu_element('format', 8)); //images
     array_push($browse->leaf, usmw_get_menu_element('format', 9)); //maps
     
     
     //people
-    $browse_people = new stdClass();
-    $browse_people->label = 'People';
-    $browse_people->parent = 'Browse';
-    $browse_people->append = 'Essays';
+    //$browse_people = new stdClass();
+    //$browse_people->label = 'People';
+    //$browse_people->parent = 'Browse';
+    //$browse_people->append = 'Essays';
     //$browse_people->leaf = [];
     
     //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
@@ -3935,7 +3936,7 @@ function get_menu_edits()
     //order is important (parents before children)
     array_push($edits, $browse);
     array_push($edits, $browse_documents);
-    array_push($edits, $browse_people);
+    //array_push($edits, $browse_people);
     
     // -- end Browse menu
     
