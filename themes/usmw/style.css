@@ -1731,10 +1731,13 @@ th.views-field.views-field-field-bio-nationality, th.views-field.views-field-fie
 }
 
 .facetapi-facetapi-checkbox-links li {
-	list-style-image:none;
-	list-style-type:none;
+	list-style-image:none !important;
+	list-style-type:none !important;
 	margin:0;
 	padding:0;
+}
+.facetapi-checkbox a {
+	text-decoration:none;
 }
 
 /************************************************/
