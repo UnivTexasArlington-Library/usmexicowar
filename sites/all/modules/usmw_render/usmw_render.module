@@ -3911,9 +3911,11 @@ function get_menu_edits()
     $browse_people->append = 'Essays';
     $browse_people->leaf = [];
     
-    array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
-    array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
-	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_surname&sort=asc', 'Sort by Last Name'));
+    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
+    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_surname&sort=asc', 'Sorted by Last Name'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_nationality&sort=asc', 'Sort by Nationality'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_birth_date&sort=asc', 'Sort by Birthdate'));
     
     
     //documents
@@ -4295,7 +4297,7 @@ function usmw_get_menu_element($type, $id)
 
 
 function site_root()
-{ return 'https://library.uta.edu/usmexicowar'; }
+{ return 'https://library-test.uta.edu/usmexicowar'; }
 
 
 
