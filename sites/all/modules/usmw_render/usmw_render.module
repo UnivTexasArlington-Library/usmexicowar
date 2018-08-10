@@ -3900,7 +3900,7 @@ function get_menu_edits()
     $browse->leaf = [];
     
     array_push($browse->leaf, usmw_get_menu_element('format', 1)); //essays
-	array_push($browse->leaf, usmw_get_menu_element('format', 8)); //images
+    array_push($browse->leaf, usmw_get_menu_element('format', 8)); //images
     array_push($browse->leaf, usmw_get_menu_element('format', 9)); //maps
     
     
@@ -3911,18 +3911,9 @@ function get_menu_edits()
     $browse_people->append = 'Essays';
     $browse_people->leaf = [];
     
-
-    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
-    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
-	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_surname&sort=asc', 'Sorted by Last Name'));
-    array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_nationality&sort=asc', 'Sorted by Nationality'));
-	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_birth_date&sort=asc', 'Sorted by Birth Date'));
-
-
-    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
-    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
+    array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
+    array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
     
-
     
     //documents
     
@@ -3944,7 +3935,7 @@ function get_menu_edits()
     //order is important (parents before children)
     array_push($edits, $browse);
     array_push($edits, $browse_documents);
-    //array_push($edits, $browse_people);
+    array_push($edits, $browse_people);
     
     // -- end Browse menu
     
