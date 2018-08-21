@@ -188,5 +188,5 @@
   </div></div> <!-- /#page, /#page-wrapper -->
   
   <!-- menu json injecting here -->
-  <?php usmw_render_page_additions(); ?>
+  <?php /* usmw_render_page_additions(); */ ?>
   
