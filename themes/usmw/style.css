@@ -1715,7 +1715,7 @@ ol.tree	li {
 }
 
 /************************************************/
-/* STYLES FOR FACET PAGE - AJL */
+/* STYLES FOR FACET PAGES - AJL */
 
 #sidebar-first {
 	float:left;
@@ -1742,6 +1742,12 @@ a.facetapi-checkbox {
 
 .block-facetapi h2 {
 	font-size:14px !important;
+}
+ul.facetapi-facet-field-content-collection li a {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /************************************************/
