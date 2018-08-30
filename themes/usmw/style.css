@@ -1743,7 +1743,7 @@ a.facetapi-checkbox {
 .block-facetapi h2 {
 	font-size:14px !important;
 }
-ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > li > a {
+ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > li {
   max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
