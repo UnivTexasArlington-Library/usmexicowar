@@ -1726,7 +1726,7 @@ td.views-field.active {
 	background-color:#f5e2b1;
 }
 
-th.views-field.views-field-field-bio-nationality, th.views-field.views-field-field-bio-surname, th.views-field.views-field-field-bio-birth-date {
+th.views-field {
 	vertical-align:bottom;
 }
 
