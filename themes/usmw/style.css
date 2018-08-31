@@ -1716,7 +1716,6 @@ ol.tree	li {
 
 /************************************************/
 /* STYLES FOR FACET PAGES - AJL */
-
 #sidebar-first {
 	float:left;
 	margin-left: 25px;
@@ -1751,3 +1750,13 @@ ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > 
 }
 
 /************************************************/
+/* STYLES FOR HOME PAGE TOPIC LINKS */
+#hometopics {
+    background-image: url(images/lower-bar-left.png);
+    background-size: 100% 100%;
+    float: left;
+    width: 592px;
+    margin-left: -15px;
+    padding-top: 40px;
+    padding-bottom: 32px;
+}
