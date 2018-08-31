@@ -888,10 +888,13 @@ ol.tree	li {
     font-size: 17px;
 }
 
+.topic_label {
+	margin-bottom: 1em;
+}
+
   .topic_label a {
 	   font-weight: bold;
-	   margin-bottom: 1em;
-	   text-decoration:none;
+	   text-decoration:none !important;
    }
    
 .home_page_leaf
