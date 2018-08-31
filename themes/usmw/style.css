@@ -1371,7 +1371,7 @@ ol.tree	li {
    }
    
    .topic_label a {
-	   font-variant: small-caps;
+	   font-variant: small-caps !important;
 	   font-weight: bold;
 	   margin-bottom: 1em;
 	   text-decoration:none;
