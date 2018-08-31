@@ -880,7 +880,6 @@ ol.tree	li {
     
 }
 
-
 .home_page_topic
 {
     margin-left: 7px;
@@ -889,6 +888,12 @@ ol.tree	li {
     font-size: 17px;
 }
 
+  .topic_label a {
+	   font-weight: bold;
+	   margin-bottom: 1em;
+	   text-decoration:none;
+   }
+   
 .home_page_leaf
 {
     color: #152c47;
@@ -1370,12 +1375,7 @@ ol.tree	li {
 	   
    }
    
-   .topic_label a {
-	   font-variant: small-caps !important;
-	   font-weight: bold;
-	   margin-bottom: 1em;
-	   text-decoration:none;
-   }
+ 
    
    .home_page_leaf a
    {
