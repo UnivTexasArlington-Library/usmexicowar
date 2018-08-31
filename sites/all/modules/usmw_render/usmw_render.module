@@ -3887,6 +3887,185 @@ function get_drupal_tree_edits($menu)
     
 }
 
+function get_menu_edits()
+{
+    $edits = [];
+    
+    
+    // -- Browse menu
+    
+    $browse = new stdClass();
+    $browse->label = 'Browse';
+    $browse->append = 'About';
+    $browse->leaf = [];
+    
+    array_push($browse->leaf, usmw_get_menu_element('format', 1)); //essays
+    array_push($browse->leaf, usmw_get_menu_element('format', 8)); //images
+    array_push($browse->leaf, usmw_get_menu_element('format', 9)); //maps
+    
+    
+    //people
+    $browse_people = new stdClass();
+    $browse_people->label = 'People';
+    $browse_people->parent = 'Browse';
+    $browse_people->append = 'Essays';
+    $browse_people->leaf = [];
+    
+    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
+    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_surname&sort=asc', 'Sorted by Last Name'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_nationality&sort=asc', 'Sorted by Nationality'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_birth_date&sort=asc', 'Sorted by Birthdate'));
+    
+    
+    //documents
+    
+    $browse_documents = new stdClass();
+    $browse_documents->label = 'Documents';
+    $browse_documents->parent = 'Browse';
+    $browse_documents->append = 'Essays';
+    $browse_documents->leaf = [];
+    
+    $documents = [2,3,4,5,6,7,11,12]; 
+
+    forEach($documents as $document) {
+        
+        array_push($browse_documents->leaf, usmw_get_menu_element('format', $document)); 
+    }
+    
+    
+    
+    //order is important (parents before children)
+    array_push($edits, $browse);
+    array_push($edits, $browse_documents);
+    array_push($edits, $browse_people);
+    
+    // -- end Browse menu
+    
+    
+    // -- Major topics menu
+    
+    $m = get_major_topics();
+    
+    $major_topics = new stdClass();
+    $major_topics->label = 'Major Topics';
+    $major_topics->append = 'About';
+    $major_topics->mobile_override = site_root() . '/#home_page_panels'; //override link
+    $major_topics->leaf = [];
+    
+    array_push($edits, $major_topics);
+    
+    $topics_list = ''; //csv
+    
+    $count = 0;
+    
+    forEach($m as $topic)
+    {
+        if($count == 0 )
+        {
+            $topics_list .= $topic->topics;
+            
+        }
+        
+        else {
+            
+            $topics_list .= ',' . $topic->topics;
+        }
+        
+        $count++;
+    }
+    
+    //echo '<br>topics list ' . json_encode($topics_list);
+    
+    $topic_titles  = get_topic_titles_from_list($topics_list);
+    
+    //echo '<br>' . json_encode($topic_titles);
+    
+    forEach($m as $topic)
+    {
+        $new_leaf = new stdClass();
+        $new_leaf->label = $topic->label;
+        $new_leaf->parent = 'Major Topics';
+        $new_leaf->leaf = [];
+        
+        
+        $list = db_access_list_to_ids($topic->topics);
+        
+        array_push($new_leaf->leaf, new usmw_menu_element('topic?topic_id='.$topic->intro, 'Introduction')); //maps
+        
+        forEach($list as $id)
+        {
+            forEach($topic_titles as $title)
+            {
+               if($id == $title->topic_id)
+               {    
+                    array_push($new_leaf->leaf, new usmw_menu_element('topic?topic_id='.$title->topic_id, json_safe($title->title)) ); //maps
+                    
+               }
+            }
+
+        }
+        
+        array_push($edits, $new_leaf);
+        
+        
+    }
+    
+    //echo 'get_topic_titles_from_list ' . json_encode(get_topic_titles_from_list($topics_list));
+    
+    //-- drupal tree
+    
+    
+    $drupal_tree = menu_tree_all_data('main-menu');
+    
+    
+    forEach($drupal_tree as $m)
+    {
+        //echo '<br><br>' . json_encode($m);
+        
+        if(count($m['below']) == 0)
+        {
+            //echo '<br>' . $m['link']['link_title'];
+            //echo '<br>' . $m['link']['link_path'];
+            
+        }
+        
+        
+        if(count($m['below']) > 0)
+        {
+            $new_leaf = new stdClass();
+            $new_leaf->label = $m['link']['link_title'];
+            $new_leaf->append = $m['link']['link_title'];
+            $new_leaf->drupal_tree = true;
+            $new_leaf->drupal_tree_original = $m['link']['mlid'];
+            $new_leaf->root_included = true;
+            $new_leaf->leaf = [];
+            
+            //echo '<br>' . $m['link']['link_title'];
+            //echo '<br>' . $m['link']['mlid'];
+            
+            forEach($m['below'] as $link)
+            {
+                
+                //echo '<br>2' . $link['link']['link_title'];
+                //echo '<br>2' . '<a href="'.$link['link']['link_path'] .'">'.$link['link']['link_title'].'</a>';
+                
+                array_push($new_leaf->leaf, new usmw_menu_element(site_root(). '/' . $link['link']['link_path'], $link['link']['link_title'])); 
+            }
+            
+            
+            array_push($edits, $new_leaf);
+            
+        }
+        
+    }
+    
+    
+    
+    return json_encode($edits);
+    
+    
+}
 
 
 function get_root_menu()
