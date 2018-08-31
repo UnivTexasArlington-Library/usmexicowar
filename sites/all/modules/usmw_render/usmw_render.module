@@ -2987,14 +2987,14 @@ function render_home_page()
     
     //$h .= '<div id="topics" ></div>';
 	
-	$h .= '<div id="hometopics"><ol class="tree major_topics_tree_left">
+	$h .= '<div id="hometopics">
+<ol class="tree major_topics_tree_left">
 <div class="home_page_topic">
 <div class="topic_label"><a href="topic?topic_id=roadtowar">Road to War</a></div>
 <div class="topic_label"><a href="topic?topic_id=1">Army of Occupation</a></div>
 <div class="topic_label"><a href="topic?topic_id=44">Northern Campaign</a></div>
 <div class="topic_label"><a href="topic?topic_id=45">War in the West</a></div>
 <div class="topic_label"><a href="topic?topic_id=46">War at Sea</a></div>
-</div>
 </div>
 </ol>
 <ol class="tree major_topics_tree_right">
@@ -3003,7 +3003,6 @@ function render_home_page()
 <div class="topic_label"><a href="topic?topic_id=1">Women and the War</a></div>
 <div class="topic_label"><a href="topic?topic_id=44">War at Home</a></div>
 <div class="topic_label"><a href="topic?topic_id=45">Occupation and Aftermath</a></div>
-</div>
 </div>
 </ol>
 </div>';
