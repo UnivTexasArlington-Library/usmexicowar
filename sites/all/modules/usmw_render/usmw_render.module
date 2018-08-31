@@ -3926,14 +3926,14 @@ function get_menu_edits()
     $browse_documents->append = 'Essays';
     $browse_documents->leaf = [];
     
-    $documents = [2,3,4,5,6,7,11,12]; 
+    $documents = [2,4,5,6,7,11,12]; //except remove 3, which is correspondence and add link below (AJL)
 
     forEach($documents as $document) {
         
         array_push($browse_documents->leaf, usmw_get_menu_element('format', $document)); 
     }
     
-    
+    array_push($browse_documents->leaf, new usmw_menu_element( 'format%3Fformat_id%3D3?order=field_content_title&sort=asc', 'Correspondence'));
     
     //order is important (parents before children)
     array_push($edits, $browse);
