@@ -3002,7 +3002,7 @@ function render_home_page()
 <div class="topic_label"><a href="node/3474">War in the South</a></div>
 <div class="topic_label"><a href="node/3478">Women and the War</a></div>
 <div class="topic_label"><a href="node/3477">War at Home</a></div>
-<div class="topic_label"><a href="node/3476">Occupation and Aftermath</a></div>
+<div class="topic_label"><a href="node/3476">Occupation &amp; Aftermath</a></div>
 </div>
 </ol>
 </div>';
