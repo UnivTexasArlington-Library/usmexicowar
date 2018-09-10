@@ -720,7 +720,7 @@ function render_content($c, $type)
     
     
     
-    if ($c->field_content_creator[LANGUAGE_NONE][0]['value'] != '' && $c->field_content_contributor[LANGUAGE_NONE][0]['value'] != '')
+    if (isset($c->field_content_creator[LANGUAGE_NONE][0]['value']) && isset($c->field_content_contributor[LANGUAGE_NONE][0]['value']))
     {
         $creators = $c->field_content_creator[LANGUAGE_NONE][0]['value'] . ' ; ' . $c->field_content_contributor[LANGUAGE_NONE][0]['value'];
         
