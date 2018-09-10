@@ -3051,11 +3051,13 @@ function media_prefix1($media_url)
 
 function usmw_field_wrap($field, $label)
 {
-    $f = '';
+    if(!isset($field[LANGUAGE_NONE][0]['value'])) { return ''; }
 	
-	$f = $field[LANGUAGE_NONE][0]['value'];
+	//$f = $field[LANGUAGE_NONE][0]['value'];
+	
+	$f = '';
     
-    if(field_empty($f)) { return ''; }
+    //if(field_empty($f)) { return ''; }
     
     return usmw_field_render($f, $label);
     
