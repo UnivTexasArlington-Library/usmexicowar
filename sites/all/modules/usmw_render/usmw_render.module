@@ -641,7 +641,7 @@ function render_content($c, $type)
         $links .= '<br><strong><a href="'.site_root().'/translation?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Translation</a></strong>';
     }
     
-    if(isset($c->field_content_transcription[LANGUAGE_NONE][0]['value']))
+    if($c->field_content_transcription[LANGUAGE_NONE][0]['value'] != '')
     {
         $links .= '<br><strong><a href="'.site_root().'/transcription?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Transcription</a></strong>';
     }
