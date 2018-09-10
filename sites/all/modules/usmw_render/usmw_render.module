@@ -819,7 +819,10 @@ function render_content($c, $type)
     
     if($is_record)
     {
-        $h .= usmw_field_render('<a href="'.$c->field_content_preservation[LANGUAGE_NONE][0]['value'] .'">' . $c->field_content_preservation[LANGUAGE_NONE][0]['value'] . '</a>', 'Preservation Link');
+        
+		if(isset($c->field_content_preservation[LANGUAGE_NONE][0]['value'])) {
+			
+		$h .= usmw_field_render('<a href="'.$c->field_content_preservation[LANGUAGE_NONE][0]['value'] .'">' . $c->field_content_preservation[LANGUAGE_NONE][0]['value'] . '</a>', 'Preservation Link');
         
         $h .= usmw_field_wrap($c->field_content_image_identifier, 'Unique Identifier');
         
@@ -836,6 +839,7 @@ function render_content($c, $type)
         $h .= usmw_field_link($c->field_content_translation, 'Translation Path');
         
         $h .= usmw_field_wrap($c->field_content_related_items, 'Related Items');
+		}
     }
     
     
