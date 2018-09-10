@@ -752,7 +752,7 @@ function render_content($c, $type)
     
         $h .= usmw_field_wrap($c->field_content_editor, 'Editor');
     
-        if(isset($c->field_content_start_page[LANGUAGE_NONE][0]['value']))
+        if($c->field_content_start_page[LANGUAGE_NONE][0]['value'] != '')
         {
             $pages = $c->field_content_start_page[LANGUAGE_NONE][0]['value'] . ' - ' . $c->field_content_end_page[LANGUAGE_NONE][0]['value'];
             $h .= usmw_field_render($pages, 'Inclusive Pages');
@@ -762,12 +762,12 @@ function render_content($c, $type)
     
         $h .= usmw_field_wrap($c->field_c_source_journal_issue, 'Journal Issue');
     
-        if(isset($c->field_c_source_catalog_link[LANGUAGE_NONE][0]['value']))
+        if($c->field_c_source_catalog_link[LANGUAGE_NONE][0]['value'] != '')
         {
             $h .= '<a href="'.$c->field_c_source_catalog_link[LANGUAGE_NONE][0]['value'].'">'. $c->field_c_source_catalog_link[LANGUAGE_NONE][0]['value'] . '</a>';
         }
         
-        if(isset($c->field_content_source_access_link[LANGUAGE_NONE][0]['value']))
+        if($c->field_content_source_access_link[LANGUAGE_NONE][0]['value'] != '')
         {
             $h .= '<a href="'.$c->field_content_source_access_link[LANGUAGE_NONE][0]['value'].'">'. $c->field_content_source_access_link[LANGUAGE_NONE][0]['value'] . '</a>';
         }
@@ -820,7 +820,7 @@ function render_content($c, $type)
     if($is_record)
     {
         
-		if(isset($c->field_content_preservation[LANGUAGE_NONE][0]['value'])) {
+		if($c->field_content_preservation[LANGUAGE_NONE][0]['value'] != '') {
 			
 		$h .= usmw_field_render('<a href="'.$c->field_content_preservation[LANGUAGE_NONE][0]['value'] .'">' . $c->field_content_preservation[LANGUAGE_NONE][0]['value'] . '</a>', 'Preservation Link');
         
