@@ -3051,7 +3051,9 @@ function media_prefix1($media_url)
 
 function usmw_field_wrap($field, $label)
 {
-    $f = $field[LANGUAGE_NONE][0]['value'];
+    $f = '';
+	
+	$f = $field[LANGUAGE_NONE][0]['value'];
     
     if(field_empty($f)) { return ''; }
     
