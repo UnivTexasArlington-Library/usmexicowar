@@ -7,7 +7,7 @@ module_load_include('inc', 'usmw_render', 'includes/db_access');
 /* hooks */
 
 function usmw_html_head_alter(&$head_elements) {
-   $title = print ($content['title']);
+   $title = print render($content['title']);
   // twitter summary card
   $head_elements['twitter_card'] = array(
     '#type' => 'html_tag',
