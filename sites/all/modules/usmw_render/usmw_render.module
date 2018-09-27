@@ -6,6 +6,16 @@ module_load_include('inc', 'usmw_render', 'includes/db_access');
 
 /* hooks */
 
+function usmw_html_head_alter(&$head_elements) {
+
+  // Force the latest IE rendering engine and Google Chrome Frame.
+  $head_elements['chrome_frame'] = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array('http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1'),
+  );
+}
+
 function usmw_page_alter(&$page) {
     
     
