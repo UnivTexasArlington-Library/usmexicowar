@@ -8,17 +8,16 @@ module_load_include('inc', 'usmw_render', 'includes/db_access');
 
 function usmw_html_head_alter(&$head_elements) {
 
-  // twitter summary card meta tag
+  // twitter summary card
   $head_elements['twitter_card'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
     '#attributes' => array('name' => 'twitter:card', 'content' => 'summary'),
   );
-  //twitter site meta tag
   $head_elements['twitter_site'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array('name' => 'twitter:site', 'content' => print render($content['title']);),
+    '#attributes' => array('name' => 'twitter:site', 'content' => 'A Continent Divided: The U.S. - Mexico War'),
   );
 }
 
