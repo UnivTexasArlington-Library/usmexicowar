@@ -8,11 +8,11 @@ module_load_include('inc', 'usmw_render', 'includes/db_access');
 
 function usmw_html_head_alter(&$head_elements) {
 
-  // Force the latest IE rendering engine and Google Chrome Frame.
-  $head_elements['chrome_frame'] = array(
+  // twitter summary card
+  $head_elements['twitter_card'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array('http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1'),
+    '#attributes' => array('name' => 'twitter:card', 'content' => 'summary'),
   );
 }
 
