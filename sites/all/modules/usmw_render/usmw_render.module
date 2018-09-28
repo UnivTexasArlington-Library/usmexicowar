@@ -624,34 +624,6 @@ function render_prev_next_content()
     return $h;
 }
 
-//record links
-function link_prep($link_url)
-{
- 
-   $link_url = media_prefix1($link_url);
-   
-   return $link_url;
-}
-
-function media_prefix1($media_url)
-{
-    /*
-    $media_url = str_replace('usmexicowar/', '', $media_url);
-    
-    $media_url = str_replace('history/', 'collections/history/', $media_url);
-    
-    $media_url = str_replace('opt/www//library-test.uta.edu/usmw-refresh-new/', '', $media_url);
-    
-    $media_url = str_replace('opt/www/library.uta.edu/', '', $media_url);
-    
-    
-    $media_url = str_replace('.JPG', '.jpg', $media_url);
-    */
-    
-    return site_root() . $media_url;
-    
-}
-
 function render_content($c, $type)
 {
     $is_item = true;
@@ -707,7 +679,7 @@ function render_content($c, $type)
     
     $links .= '<br><strong><a href="mailto:'.contact_email().'">Send a correction</a></strong>';
     $links .= '<br /><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
-	$links .= '<br /><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flibrary.uta.edu%2Fusmexicowar%2F&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';
+	$links .= '<br /><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flibrary.uta.edu%2Fusmexicowar%2F&'.$link_url.'layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';
     
     
     $h .= standard_content_page_thumbnail($c, $links);
@@ -3043,7 +3015,33 @@ function render_home_page()
     
 }
 
+//record links
+function link_prep($link_url)
+{
+ 
+   $link_url = media_prefix1($link_url);
+   
+   return $link_url;
+}
 
+function media_prefix1($media_url)
+{
+    /*
+    $media_url = str_replace('usmexicowar/', '', $media_url);
+    
+    $media_url = str_replace('history/', 'collections/history/', $media_url);
+    
+    $media_url = str_replace('opt/www//library-test.uta.edu/usmw-refresh-new/', '', $media_url);
+    
+    $media_url = str_replace('opt/www/library.uta.edu/', '', $media_url);
+    
+    
+    $media_url = str_replace('.JPG', '.jpg', $media_url);
+    */
+    
+    return site_root() . $media_url;
+    
+}
 
 
 
