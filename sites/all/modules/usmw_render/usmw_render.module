@@ -19,11 +19,11 @@ function usmw_html_head_alter(&$head_elements) {
     '#tag' => 'meta',
     '#attributes' => array('name' => 'twitter:site', 'content' => 'This is the site title'),
   );
-    $image_url = media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']);
+    $image_url = print (media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']));
 	$head_elements['twitter_site'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array('name' => 'twitter:image', 'content' => $image_url),
+    '#attributes' => array('name' => 'twitter:image', 'content' => $image_url;),
   );
 }
 
