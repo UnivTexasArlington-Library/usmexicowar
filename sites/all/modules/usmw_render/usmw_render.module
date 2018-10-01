@@ -1197,8 +1197,8 @@ function render_essay_content($c, $type)
         $h .= '<h2>Full Record View</h2>';
 		
 	//add twitter and facebook share buttons
-	$hh .= '<br class="twitter-br" /><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
-	$h .= '<br /><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flibrary.uta.edu%2Fusmexicowar%2Fitem?content_id='.$content_id.'&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';	
+	$h .= '<br class="twitter-br" /><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
+	$h .= '<br /><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flibrary.uta.edu%2Fusmexicowar%2Fitem?content_id='.(string)$c->field_content_id[LANGUAGE_NONE][0]['value'].'&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';	
 
     }
    
