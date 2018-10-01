@@ -23,7 +23,7 @@ function usmw_html_head_alter(&$head_elements) {
 	$head_elements['twitter_image'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array('name' => 'twitter:image', 'content' => echo $image_url;),
+    '#attributes' => array('name' => 'twitter:image', 'content' => $image_url),
   );
 }
 
