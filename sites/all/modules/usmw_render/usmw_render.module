@@ -7,23 +7,12 @@ module_load_include('inc', 'usmw_render', 'includes/db_access');
 /* hooks */
 
 function usmw_html_head_alter(&$head_elements) {
- //  $title = print ($content['title']);
+
 //   twitter summary card
   $head_elements['twitter_card'] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
     '#attributes' => array('name' => 'twitter:card', 'content' => 'summary'),
-  );
-  $head_elements['twitter_site'] = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array('name' => 'twitter:site', 'content' => 'This is the site title'),
-  );
-    $image_url = media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']);
-	$head_elements['twitter_image'] = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array('name' => 'twitter:image', 'content' => $image_url),
   );
 }
 
@@ -691,7 +680,7 @@ function render_content($c, $type)
     $links .= '<br><strong><a href="mailto:'.contact_email().'">Send a correction</a></strong>';
     $links .= '<br /><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
 	$links .= '<br /><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flibrary.uta.edu%2Fusmexicowar%2Fitem?content_id='.$content_id.'&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';
-	$links .= '<img src="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250" "="">';
+	
     
     
     $h .= standard_content_page_thumbnail($c, $links);
