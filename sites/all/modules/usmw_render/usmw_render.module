@@ -1178,15 +1178,13 @@ function render_essay_content($c, $type)
 		        	//add twitter and facebook share buttons
 	$h .= '<br class="twitter-br" /><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
 	$h .= '<br /><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flibrary.uta.edu%2Fusmexicowar%2Fitem?content_id='.(string)$c->field_content_id[LANGUAGE_NONE][0]['value'].'&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';	
-    }
-        
+   
     }
     
     if($is_record)
     {
         $links .= '<br><strong><a onclick="history.back(-1)" class="view">View Short Record</a></strong>';
-		
-
+	}
    
    $h .= standard_content_page_thumbnail($c, $links);
    
