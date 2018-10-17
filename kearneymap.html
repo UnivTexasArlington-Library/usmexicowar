@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kearney2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <style>
+      html, body, #map {width:100%; height:100%; margin:0; padding:0; }
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.8/js/esri/css/esri.css">
+    <script src="https://js.arcgis.com/3.8/"></script>
+  </head>
+  <body>
+    <div id="map">
+    <script>
+      var map;
+      require(['esri/map', 'esri/geometry/Extent', 'esri/layers/WebTiledLayer'], 
+      function(Map, Extent, WebTiledLayer) {
+        var mapBounds = new esri.geometry.Extent({
+          xmin: -124.18484808, ymin: 30.28222163,
+          xmax: -103.39553448, ymax: 42.09564441,
+          spatialReference:{wkid:4326} 
+        });
+        var mapMinZoom = 4;
+        var mapMaxZoom = 81;
+        var uri = 'https://library-test.uta.edu/usmexicowar/tileserver/';
+        var tiles = uri.slice(0, uri.lastIndexOf('/') + 1) + '{z}/{x}/{y}.png';
+        map = new Map('map', {
+          basemap: 'national-geographic', // streets | satellite | hybrid | topo | gray | oceans | national-geographic | osm
+          smartNavigation: false,
+          extent:mapBounds,
+          fitExtent:true
+        });
+        var maptiler = new WebTiledLayer(tiles.replace('{z}/{x}/{y}','${level}/${col}/${row}'), {
+          copyright: 'Tiles by <a href="http://www.maptiler.com">MapTiler</a>',
+          id: 'kearney2'
+        });
+        map.addLayer(maptiler);
+      });  
+    </script>  
+  </body>
+</html>
