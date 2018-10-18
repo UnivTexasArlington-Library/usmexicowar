@@ -739,7 +739,7 @@ function render_content($c, $type)
     
     
     
-    if($c->field_content_creator[LANGUAGE_NONE][0]['value'] != '' && $c->field_content_contributor[LANGUAGE_NONE][0]['value'] != '')
+    if ($c->field_content_creator[LANGUAGE_NONE][0]['value'] != '' && $c->field_content_contributor[LANGUAGE_NONE][0]['value'] != '')
     {
         $creators = $c->field_content_creator[LANGUAGE_NONE][0]['value'] . ' ; ' . $c->field_content_contributor[LANGUAGE_NONE][0]['value'];
         
@@ -771,7 +771,7 @@ function render_content($c, $type)
     
         $h .= usmw_field_wrap($c->field_content_editor, 'Editor');
     
-        if($c->field_content_start_page[LANGUAGE_NONE][0]['value'] != "")
+        if($c->field_content_start_page[LANGUAGE_NONE][0]['value'] != '')
         {
             $pages = $c->field_content_start_page[LANGUAGE_NONE][0]['value'] . ' - ' . $c->field_content_end_page[LANGUAGE_NONE][0]['value'];
             $h .= usmw_field_render($pages, 'Inclusive Pages');
@@ -781,12 +781,12 @@ function render_content($c, $type)
     
         $h .= usmw_field_wrap($c->field_c_source_journal_issue, 'Journal Issue');
     
-        if($c->field_c_source_catalog_link[LANGUAGE_NONE][0]['value'] != "")
+        if($c->field_c_source_catalog_link[LANGUAGE_NONE][0]['value'] != '')
         {
             $h .= '<a href="'.$c->field_c_source_catalog_link[LANGUAGE_NONE][0]['value'].'">'. $c->field_c_source_catalog_link[LANGUAGE_NONE][0]['value'] . '</a>';
         }
         
-        if($c->field_content_source_access_link[LANGUAGE_NONE][0]['value'] != "")
+        if($c->field_content_source_access_link[LANGUAGE_NONE][0]['value'] != '')
         {
             $h .= '<a href="'.$c->field_content_source_access_link[LANGUAGE_NONE][0]['value'].'">'. $c->field_content_source_access_link[LANGUAGE_NONE][0]['value'] . '</a>';
         }
@@ -838,7 +838,10 @@ function render_content($c, $type)
     
     if($is_record)
     {
-        $h .= usmw_field_render('<a href="'.$c->field_content_preservation[LANGUAGE_NONE][0]['value'] .'">' . $c->field_content_preservation[LANGUAGE_NONE][0]['value'] . '</a>', 'Preservation Link');
+        
+		if($c->field_content_preservation[LANGUAGE_NONE][0]['value'] != '') {
+			
+		$h .= usmw_field_render('<a href="'.$c->field_content_preservation[LANGUAGE_NONE][0]['value'] .'">' . $c->field_content_preservation[LANGUAGE_NONE][0]['value'] . '</a>', 'Preservation Link');
         
         $h .= usmw_field_wrap($c->field_content_image_identifier, 'Unique Identifier');
         
@@ -855,6 +858,7 @@ function render_content($c, $type)
         $h .= usmw_field_link($c->field_content_translation, 'Translation Path');
         
         $h .= usmw_field_wrap($c->field_content_related_items, 'Related Items');
+		}
     }
     
     
@@ -3014,8 +3018,28 @@ function render_home_page()
     $h .= '<h3>Major Topics</h3>';
     
     
-    $h .= '<div id="topics" ></div>';
-    
+    //$h .= '<div id="topics" ></div>';
+	
+	$h .= '<div id="hometopics">
+<ol class="tree major_topics_tree_left">
+<div class="home_page_topic">
+<div class="topic_label"><a href="node/3473">Road to War</a></div>
+<div class="topic_label"><a href="node/3472">Army of Occupation</a></div>
+<div class="topic_label"><a href="node/3475">Northern Campaign</a></div>
+<div class="topic_label"><a href="node/3480">War in the West</a></div>
+<div class="topic_label"><a href="node/3479">War at Sea</a></div>
+</div>
+</ol>
+<ol class="tree major_topics_tree_right">
+<div class="home_page_topic">
+<div class="topic_label"><a href="node/3474">War in the South</a></div>
+<div class="topic_label"><a href="node/3478">Women and the War</a></div>
+<div class="topic_label"><a href="node/3477">War at Home</a></div>
+<div class="topic_label"><a href="node/3476">Occupation &amp; Aftermath</a></div>
+</div>
+</ol>
+</div>';
+
     $h .= '<div id="imagecontainer"><div id="image"><div class="i"><a href="#"><img src="themes/usmw/includes/usmw-E404-K46-1851_i12.png"></a></div></div></div>';
     
     $h .= '</div>';
@@ -3061,8 +3085,8 @@ function media_prefix1($media_url)
 function usmw_field_wrap($field, $label)
 {
     $f = $field[LANGUAGE_NONE][0]['value'];
-    
-    if(field_empty($f)) { return ''; }
+	
+	if(field_empty($f)) { return ''; }
     
     return usmw_field_render($f, $label);
     
@@ -3940,8 +3964,11 @@ function get_menu_edits()
     $browse_people->append = 'Essays';
     $browse_people->leaf = [];
     
-    array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
-    array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
+    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=Mexico', 'Mexico'));
+    //array_push($browse_people->leaf, new usmw_menu_element( 'format?format_id=10&nation=US', 'US'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_surname&sort=asc', 'Sorted by Last Name'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_nationality&sort=asc', 'Sorted by Nationality'));
+	array_push($browse_people->leaf, new usmw_menu_element( 'format%3Fformat_id%3D10?order=field_bio_birth_date&sort=asc', 'Sorted by Birthdate'));
     
     
     //documents
@@ -3952,14 +3979,17 @@ function get_menu_edits()
     $browse_documents->append = 'Essays';
     $browse_documents->leaf = [];
     
-    $documents = [2,3,4,5,6,7,11,12]; 
+    $documents = [4,5,6,7,11,12]; //except remove 2 (broadsides) and 3 (correspondence) and add manually below (AJL)
+	
+	array_push($browse_documents->leaf, new usmw_menu_element( 'format?format_id=2', 'Broadsides'));
+	array_push($browse_documents->leaf, new usmw_menu_element( 'format%3Fformat_id%3D3?order=field_content_title&sort=asc', 'Correspondence'));
 
     forEach($documents as $document) {
         
         array_push($browse_documents->leaf, usmw_get_menu_element('format', $document)); 
     }
     
-    
+   
     
     //order is important (parents before children)
     array_push($edits, $browse);
@@ -4323,7 +4353,7 @@ function usmw_get_menu_element($type, $id)
 
 
 function site_root()
-{ return 'https://library.uta.edu/usmexicowar'; }
+{ return 'https://library-test.uta.edu/usmexicowar'; }
 
 
 
@@ -4855,39 +4885,39 @@ function get_sorting_tags($sort)
     $mobile_prefix = '<div class="mobile_show_inline" style="text-decoration: underline;">Sort By&nbsp;</div>';
     
     $tags->title = 'titledesc';
-    $tags->title_label = $mobile_prefix . 'Title ▲';
+    $tags->title_label = $mobile_prefix . 'Title â–²';
     
     $tags->date = 'datedesc';
-    $tags->date_label = $mobile_prefix . 'Date ▲';
+    $tags->date_label = $mobile_prefix . 'Date â–²';
     
     $tags->name = 'namedesc';
-    $tags->name_label = $mobile_prefix . 'Name ▼';
+    $tags->name_label = $mobile_prefix . 'Name â–¼';
     
     $tags->search = 'asc';
-    $tags->search_label = $mobile_prefix . 'Title ▲';
+    $tags->search_label = $mobile_prefix . 'Title â–²';
     
     if($sort == 'titledesc')
     {
        $tags->title = 'titleasc'; 
-       $tags->title_label = $mobile_prefix . 'Title ▼';
+       $tags->title_label = $mobile_prefix . 'Title â–¼';
     }
     
     if($sort == 'datedesc')
     {
        $tags->date = 'dateasc';
-       $tags->date_label = $mobile_prefix . 'Date ▼';
+       $tags->date_label = $mobile_prefix . 'Date â–¼';
     }
     
     if($sort == 'namedesc')
     {
         $tags->name = 'nameasc';
-        $tags->name_label = $mobile_prefix . 'Name ▲';
+        $tags->name_label = $mobile_prefix . 'Name â–²';
     }
     
     if($sort == 'asc')
     {
         $tags->search = 'desc';
-        $tags->search_label = $mobile_prefix . 'Title ▼';
+        $tags->search_label = $mobile_prefix . 'Title â–¼';
     }
     
     
@@ -5146,7 +5176,7 @@ function usmw_search_bar()
     $h .= '<input type="text" name="searchstring" id="searchstring">';
     $h .= '<input type="submit" name="Search" id="search result" value="" class="imgsearch">';
     $h .= '<br>';
-    $h .= '<b><a href="'.site_root().'/advancedsearch">▸ Narrow your search</a></b>';
+    $h .= '<b><a href="'.site_root().'/advancedsearch">â–¸ Narrow your search</a></b>';
     $h .= '</form>';
     $h .= '</div>';
     
