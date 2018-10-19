@@ -1710,7 +1710,55 @@ ol.tree	li {
        margin-left:0px;
        
    }
-    
+  
     
 }
+
+/************************************************/
+/* STYLES FOR FACET PAGES - AJL */
+#sidebar-first {
+	float:left;
+	margin-left: 25px;
+}
+	
+td.views-field.active {
+	background-color:#f5e2b1;
+}
+
+th.views-field {
+	vertical-align:bottom;
+}
+
+.facetapi-facetapi-checkbox-links li {
+	list-style-image:none !important;
+	list-style-type:none !important;
+	margin:0;
+	padding:0;
+}
+a.facetapi-checkbox {
+	text-decoration:none !important;
+}
+
+.block-facetapi h2 {
+	font-size:14px !important;
+}
+ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > li {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/************************************************/
+/* STYLES FOR HOME PAGE TOPIC LINKS */
+#hometopics {
+    background-image: url(images/lower-bar-left.png);
+    background-size: 100% 100%;
+    float: left;
+    width: 592px;
+    margin-left: -15px;
+    padding-top: 40px;
+    padding-bottom: 32px;
+}
+
 
