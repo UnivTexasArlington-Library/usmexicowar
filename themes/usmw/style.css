@@ -29,6 +29,10 @@ body {
 }
 
 /* #wrapper */
+
+#page-wrapper {
+	background-image: url(/usmexicowar/themes/usmw/images/grey-bg.jpg);
+}
 #page {
     
     background-image: url(images/usmw-background-home.jpg);
