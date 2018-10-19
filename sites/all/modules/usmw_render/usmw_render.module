@@ -5176,7 +5176,7 @@ function usmw_search_bar()
     $h .= '<input type="text" name="searchstring" id="searchstring">';
     $h .= '<input type="submit" name="Search" id="search result" value="" class="imgsearch">';
     $h .= '<br>';
-    $h .= '<b><a href="'.site_root().'/advancedsearch">Narrow your search</a></b>';
+    $h .= '<b><a href="'.site_root().'/advancedsearch">&#x25B8; Narrow your search</a></b>';
     $h .= '</form>';
     $h .= '</div>';
     
