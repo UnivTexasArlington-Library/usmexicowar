@@ -1,6 +1,6 @@
 <?php
 
-/* This is a test
+/* 
  * TileServer.php project
  * ======================
  * https://github.com/klokantech/tileserver-php/
