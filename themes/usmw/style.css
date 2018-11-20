@@ -1763,7 +1763,7 @@ ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > 
 }
 
 /************************************************/
-/* STYLES FOR HOME PAGE TOPIC LINKS */
+/* STYLES FOR HOME PAGE TOPIC LINKS  - AJL */
 #hometopics {
     background-image: url(images/lower-bar-left.png);
     background-size: 100% 100%;
@@ -1774,4 +1774,8 @@ ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > 
     padding-bottom: 32px;
 }
 
-
+/************************************************/
+/* STYLES FOR FACEBOOK EMBED  - AJL */
+#facebookembed {
+	margin:auto;
+}
