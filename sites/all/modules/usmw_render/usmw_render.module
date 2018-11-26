@@ -4888,16 +4888,16 @@ function get_sorting_tags($sort)
     $mobile_prefix = '<div class="mobile_show_inline" style="text-decoration: underline;">Sort By&nbsp;</div>';
     
     $tags->title = 'titledesc';
-    $tags->title_label = $mobile_prefix . 'Title â–²';
+    $tags->title_label = $mobile_prefix . 'Title &#9650;';
     
     $tags->date = 'datedesc';
-    $tags->date_label = $mobile_prefix . 'Date â–²';
+    $tags->date_label = $mobile_prefix . 'Date &#9650;';
     
     $tags->name = 'namedesc';
     $tags->name_label = $mobile_prefix . 'Name â–¼';
     
     $tags->search = 'asc';
-    $tags->search_label = $mobile_prefix . 'Title â–²';
+    $tags->search_label = $mobile_prefix . 'Title &#9650;';
     
     if($sort == 'titledesc')
     {
@@ -4914,7 +4914,7 @@ function get_sorting_tags($sort)
     if($sort == 'namedesc')
     {
         $tags->name = 'nameasc';
-        $tags->name_label = $mobile_prefix . 'Name â–²';
+        $tags->name_label = $mobile_prefix . 'Name &#9650;';
     }
     
     if($sort == 'asc')
