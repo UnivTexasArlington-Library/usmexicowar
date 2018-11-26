@@ -1266,12 +1266,12 @@ function render_bio_content($b, $type)
     
             if($nation == 'Mexico')
             {
-                $breadcrumbs .= '<div class="breadcrumbs"><a href="'.site_root().'/format?format_id=10&nation=Mexico">People - Mexico</a>&gt;'.bio_name($b).'</div>';
+                $breadcrumbs .= '<div class="breadcrumbs"><a href="'.site_root().'/format?format_id=10&nation=Mexico">Biographies - Mexico</a>&gt;'.bio_name($b).'</div>';
             }
             
             else if($nation == 'US')
             {
-                $breadcrumbs .= '<div class="breadcrumbs"><a href="'.site_root().'/format?format_id=10&nation=US">People - US</a>&gt;'.bio_name($b).'</div>';
+                $breadcrumbs .= '<div class="breadcrumbs"><a href="'.site_root().'/format?format_id=10&nation=US">Biographies - US</a>&gt;'.bio_name($b).'</div>';
             }
             
             
@@ -1583,7 +1583,7 @@ function render_format_bio()
     
     $h .= hide_default_breadcrumbs();
     
-    $h .= '<h1>People- ' . $nationality .'</h1>';
+    $h .= '<h1>Biographies- ' . $nationality .'</h1>';
     
     $sort = get_sorting_tags($format_bios->sorting);
     
@@ -3962,7 +3962,7 @@ function get_menu_edits()
     
     //people
     $browse_people = new stdClass();
-    $browse_people->label = 'People';
+    $browse_people->label = 'Biographies';
     $browse_people->parent = 'Browse';
     $browse_people->append = 'Essays';
     $browse_people->leaf = [];
@@ -4180,7 +4180,7 @@ function usmw_render_get_page_title($default_title)
     
         if($b)
         {
-           $details = 'People: ' . bio_name($b) . ' ';
+           $details = 'Biographies: ' . bio_name($b) . ' ';
         }
         
         else 
