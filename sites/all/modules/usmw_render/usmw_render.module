@@ -4268,7 +4268,7 @@ function usmw_render_get_page_title($default_title)
     
 }
 
-function usmw_render_get_page_breadcrumbs()
+/* function usmw_render_get_page_breadcrumbs()
 {
     $breadcrumbs = [];
     
@@ -4327,7 +4327,7 @@ function usmw_render_get_page_breadcrumbs()
     
     
 }
-
+*/
 
 function usmw_get_menu_element($type, $id)
 {
