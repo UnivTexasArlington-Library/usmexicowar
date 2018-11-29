@@ -1689,11 +1689,11 @@ function render_topic_format()
     
     //$h .= '<div class="topic_thumbnail_wrapper">';
     
-    $h .= '<p class="left_paragraph">';
+    $h .= '<!-- <p class="left_paragraph"> -->';
     
     $h .= '<!-- <a class="topic_thumbnail" href="'.media_prefix1($t->field_topic_image_url[LANGUAGE_NONE][0]['value']).'"><img src="'.media_prefix1($t->field_topic_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250"></a> -->';
     
-    $h .= '</p>';
+    $h .= '<!-- </p> -->';
     
     //$h .= '</div>';
     
@@ -4303,12 +4303,12 @@ function usmw_render_get_page_title($default_title)
                     
                     if($link['link']['link_path'] == current_path())
                     {
-                        array_push($breadcrumbs, '<!-- <div class="module-link activetype"><a href="'. $href.'">'.$link['link']['link_title'].'</a></div> -->');
+                        array_push($breadcrumbs, '<div class="module-link activetype"><a href="'. $href.'">'.$link['link']['link_title'].'</a></div>');
                     }
                     
                     else {
                         
-                        array_push($breadcrumbs, '<!-- <div class="module-link "><a href="'. $href.'">'.$link['link']['link_title'].'</a></div> -->');
+                        array_push($breadcrumbs, '<div class="module-link "><a href="'. $href.'">'.$link['link']['link_title'].'</a></div>');
                         
                     }
                 }
