@@ -1691,7 +1691,7 @@ function render_topic_format()
     
     $h .= '<p class="left_paragraph">';
     
-    $h .= '<a class="topic_thumbnail" href="'.media_prefix1($t->field_topic_image_url[LANGUAGE_NONE][0]['value']).'"><img src="'.media_prefix1($t->field_topic_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250"></a>';
+    $h .= '<!-- <a class="topic_thumbnail" href="'.media_prefix1($t->field_topic_image_url[LANGUAGE_NONE][0]['value']).'"><img src="'.media_prefix1($t->field_topic_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250"></a> -->';
     
     $h .= '</p>';
     
