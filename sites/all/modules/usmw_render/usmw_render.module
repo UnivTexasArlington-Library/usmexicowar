@@ -3569,9 +3569,9 @@ function content_links_by_topic_id($topic_id)
     
     forEach($formats as $format)
     {
-        array_push($h, '<div class="module-link">');
+        array_push($h, '<!-- <div class="module-link">');
         array_push($h, '<a href="'.site_root().'/topic_format?topic_id='.$topic_id.'&format_id='.(string)$format.'">'. format_name($format) .'</a>');
-        array_push($h, '</div>');
+        array_push($h, '</div> -->');
     }
     
     
