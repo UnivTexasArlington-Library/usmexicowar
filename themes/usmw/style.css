@@ -70,7 +70,7 @@ body {
 	margin-top: -10px;
 	margin-left: -4px;
 	margin-right: 10px;
-	background-color: #f6eedb;
+	background-color: #f6f1e6;
 	font-size: 12px;
 	color: #152c47;
 	}
@@ -1735,7 +1735,7 @@ ol.tree	li {
 }
 	
 td.views-field.active {
-	background-color:#f6eedb;
+	background-color:#f6f1e6;
 }
 
 th.views-field {
