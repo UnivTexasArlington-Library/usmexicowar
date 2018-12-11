@@ -257,7 +257,7 @@ body {
 }
 #page-content .activetype a, #page-content .activetype a:visited, #page-content .activetype a:hover, #page-content .activetype a:link {
 	background: #993333;
-	color: #f5e2b1 !important;
+	color: #f5f2e9 !important;
 	padding-left: 3px;
     padding-right: 3px;
 }
@@ -360,7 +360,7 @@ body {
 	list-style: none;
 	position:relative;
 	display:inline-table;
-	color: #f5e2b1;
+	color: #f5f2e9;
 	z-index: 1000;
 	margin:0px;
 }
@@ -389,7 +389,7 @@ body {
 }
 #cssmenu ul li a{
 	display:block;
-	color: #f5e2b1;
+	color: #f5f2e9;
 	text-decoration:none;
 	padding:7px;
 }
@@ -638,7 +638,7 @@ ol.tree	li {
 	list-style: none;
 	position:relative;
 	display:inline-table;
-	color: #f5e2b1;
+	color: #f5f2e9;
 	z-index: 100;
 }
 #cssmenu ul:first-child {
@@ -665,7 +665,7 @@ ol.tree	li {
 }
 #cssmenu ul li a{
 	display:block;
-	color: #f5e2b1;
+	color: #f5f2e9;
 	text-decoration:none;
 }
 #cssmenu ul li:hover {
