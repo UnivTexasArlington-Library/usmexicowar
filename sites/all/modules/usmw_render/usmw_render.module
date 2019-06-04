@@ -3640,7 +3640,7 @@ function field_empty($f)
 
 function contact_email()
 {
-    return 'lynnfj@uta.edu';
+    return 'library-web_comments@listserv.uta.edu';
 }
 
 function get_content_id()
