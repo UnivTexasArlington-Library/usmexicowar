@@ -672,7 +672,7 @@ function render_content($c, $type)
 	
     if($is_record)
     {
-        $links .= '<br><strong><a onclick="history.back(-1)" class="view">View Short Record</a></strong>';
+        $links .= '<br><strong><a style="cursor:pointer;" onclick="history.back(-1)" class="view">View Short Record</a></strong>';
         
     }
     
@@ -1303,7 +1303,7 @@ function render_bio_content($b, $type)
     
     if($is_record)
     {
-        $links .= '<br><strong><a onclick="history.back(-1)" class="view">View Short Record</a></strong>';
+        $links .= '<br><strong><a style="cursor:pointer;" onclick="history.back(-1)" class="view">View Short Record</a></strong>';
         $links .= '<br><strong><a href="mailto:'.contact_email().'">Send a correction</a></strong>';
 		
 	//add twitter and facebook share buttons
