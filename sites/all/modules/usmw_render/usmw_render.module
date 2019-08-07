@@ -701,14 +701,16 @@ function render_content($c, $type)
     
     //$creators = $c->field_content_creator[LANGUAGE_NONE][0]['value'] . ' ; ' . $c->field_content_contributor[LANGUAGE_NONE][0]['value'];
     
+	if (($is_record) or ($is_item))
+	{
+		 $h .= usmw_field_wrap($c->field_content_description, 'Description');
+	}
     
     if($is_record)
     {
         $h .= '<br><h2>Full Record View</h2>';
     
-        $h .= usmw_field_wrap($c->field_content_description, 'Description');
-		
-		$h .= usmw_field_wrap($c->field_content_id, 'Content Id');
+       	$h .= usmw_field_wrap($c->field_content_id, 'Content Id');
     
         $h .= usmw_field_wrap($c->field_content_title, 'Full Title');
     }
@@ -835,7 +837,7 @@ function render_content($c, $type)
     
     $h .= usmw_field_wrap($c->field_content_call_number, 'Call Number');
 
-    $h .= usmw_field_wrap($c->field_content_description, 'Description');
+    //$h .= usmw_field_wrap($c->field_content_description, 'Description');
     
     
     if($is_record)
