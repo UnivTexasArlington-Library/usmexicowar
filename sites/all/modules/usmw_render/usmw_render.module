@@ -704,7 +704,7 @@ function render_content($c, $type)
     
     if($is_record)
     {
-        $h .= '<br><h2>Full Record View</h2>';
+        $h .= '<h2>Full Record View</h2>';
     
     }
 	
