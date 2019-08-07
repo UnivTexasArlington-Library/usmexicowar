@@ -706,7 +706,9 @@ function render_content($c, $type)
     {
         $h .= '<br><h2>Full Record View</h2>';
     
-        $h .= usmw_field_wrap($c->field_content_id, 'Content Id');
+        $h .= usmw_field_wrap($c->field_content_description, 'Description');
+		
+		$h .= usmw_field_wrap($c->field_content_id, 'Content Id');
     
         $h .= usmw_field_wrap($c->field_content_title, 'Full Title');
     }
