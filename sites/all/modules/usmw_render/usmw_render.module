@@ -705,6 +705,8 @@ function render_content($c, $type)
     if($is_record)
     {
         $h .= '<br><h2>Full Record View</h2>';
+		
+		$h .= usmw_field_wrap($c->field_content_description, 'Description');
     
         $h .= usmw_field_wrap($c->field_content_id, 'Content Id');
     
@@ -833,7 +835,7 @@ function render_content($c, $type)
     
     $h .= usmw_field_wrap($c->field_content_call_number, 'Call Number');
 
-    $h .= usmw_field_wrap($c->field_content_description, 'Description');
+    
     
     
     if($is_record)
