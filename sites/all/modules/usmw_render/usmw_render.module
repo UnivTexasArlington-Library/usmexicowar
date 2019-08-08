@@ -1559,7 +1559,7 @@ function render_format()
         $col2 = '<a href="'.$link.'">';
         $col2 .= $content->field_content_title[LANGUAGE_NONE][0]['value'];
 		$col2 .= '</a>';
-		if($c->field_content_translation[LANGUAGE_NONE][0]['value'] != '')
+		if($content->field_content_translation[LANGUAGE_NONE][0]['value'] != '')
     {
         $col2 .= '<br>Translation Available';
     }
