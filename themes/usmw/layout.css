@@ -42,7 +42,7 @@ body.highlighted {
 .featured-collection {
 	display:flex;
 }
-.fc-img img {
+.fc-img {
 	border:3px solid #d7bf93;
 	margin:10px;
 }
