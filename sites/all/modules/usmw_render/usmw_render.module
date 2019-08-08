@@ -1561,7 +1561,7 @@ function render_format()
 		$col2 .= '</a>';
 		if($content->field_content_translation[LANGUAGE_NONE][0]['value'] != '')
     {
-        $col2 .= '<br>Translation Available';
+        $col2 .= '<br><span style="font-style:italic;font-weight:bold;font-size:80%;">translation available</span>';
     }
         
         $col3 = $date;
