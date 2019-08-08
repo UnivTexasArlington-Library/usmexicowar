@@ -38,3 +38,14 @@ body.highlighted {
 
 }
 
+/*************** For FEATURED COLLECTIONS (ajl) ********************/
+.featured-collection {
+	display:flex;
+}
+.fc-img img {
+	border:3px solid #d7bf93;
+	margin:10px;
+}
+@media only screen and (max-width: 1023px) {
+	.featured-collection {display:block;}
+}
