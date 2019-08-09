@@ -4026,7 +4026,7 @@ function get_menu_edits()
     $major_topics->leaf = [];
     
 	array_push($edits, $major_topics);
-    array_push($major_topics->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections')); //add "Featured Collections" manually to menu (ajl) 
+    
     $topics_list = ''; //csv
     
     $count = 0;
