@@ -4025,6 +4025,8 @@ function get_menu_edits()
     $major_topics->mobile_override = site_root() . '/#home_page_panels'; //override link
     $major_topics->leaf = [];
     
+	array_push($new_leaf->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections')); //add "Featured Collections" manually to menu (ajl) 
+	
     array_push($edits, $major_topics);
     
     $topics_list = ''; //csv
@@ -4078,7 +4080,6 @@ function get_menu_edits()
             }
 
         }
-        array_push($new_leaf->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections')); //add "Featured Collections" manually to menu (ajl) 
         array_push($edits, $new_leaf);
         
         
