@@ -4024,9 +4024,9 @@ function get_menu_edits()
     $major_topics->append = 'About';
     $major_topics->mobile_override = site_root() . '/#home_page_panels'; //override link
     $major_topics->leaf = [];
-    array_push($major_topics->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections')); //add "Featured Collections" manually to menu (ajl) 
-	array_push($edits, $major_topics);
     
+	array_push($edits, $major_topics);
+    array_push($major_topics->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections')); //add "Featured Collections" manually to menu (ajl) 
     $topics_list = ''; //csv
     
     $count = 0;
