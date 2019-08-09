@@ -3967,6 +3967,7 @@ function get_menu_edits()
     $browse->append = 'About';
     $browse->leaf = [];
     
+	array_push($browse->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections'));
     array_push($browse->leaf, usmw_get_menu_element('format', 1)); //essays
     array_push($browse->leaf, usmw_get_menu_element('format', 8)); //images
     array_push($browse->leaf, usmw_get_menu_element('format', 9)); //maps
