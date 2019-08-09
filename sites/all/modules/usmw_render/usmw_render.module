@@ -4064,7 +4064,7 @@ function get_menu_edits()
         $list = db_access_list_to_ids($topic->topics);
         
         array_push($new_leaf->leaf, new usmw_menu_element('topic?topic_id='.$topic->intro, 'Introduction')); //maps
-        array_push($new_leaf->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections')); //add "Featured Collections" manually to menu (ajl) 
+        
 		
         forEach($list as $id)
         {
@@ -4078,7 +4078,7 @@ function get_menu_edits()
             }
 
         }
-        
+        array_push($new_leaf->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections')); //add "Featured Collections" manually to menu (ajl) 
         array_push($edits, $new_leaf);
         
         
