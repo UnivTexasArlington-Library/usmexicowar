@@ -643,13 +643,13 @@ function render_content($c, $type)
     if($c->field_content_pdf[LANGUAGE_NONE][0]['value'] != '')
     {
     
-        $links .= '<br><strong><a href="'.media_prefix1($c->field_content_pdf[LANGUAGE_NONE][0]['value']).'" target="blank" class="view">View PDF</a></strong>';
+        $links .= '<br><strong><a href="'.media_prefix1($c->field_content_pdf[LANGUAGE_NONE][0]['value']).'" class="view">View PDF</a></strong>';
     }
 	
 	if($c->field_content_image_url[LANGUAGE_NONE][0]['value'] != '')
     {
     
-        $links .= '<br><strong><a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" target="blank" class="view">View Image</a></strong>';
+        $links .= '<br><strong><a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" class="view">View Image</a></strong>';
     } 
     
     if($c->field_content_translation[LANGUAGE_NONE][0]['value'] != '')
