@@ -3998,7 +3998,7 @@ function get_menu_edits()
     $documents = [4,5,6,7,11,12]; //except remove 2 (broadsides) and 3 (correspondence) and add manually below (ajl)
 	
 	array_push($browse_documents->leaf, new usmw_menu_element( 'format?format_id=2', 'Broadsides'));
-	array_push($browse_documents->leaf, new usmw_menu_element( 'format?format_id=3', 'Correspondence'));
+	array_push($browse_documents->leaf, new usmw_menu_element( 'format%3Fformat_id%3D3?order=field_content_time_coverage_star&sort=desc', 'Correspondence'));
 
     forEach($documents as $document) {
         
