@@ -3468,7 +3468,7 @@ function standard_content_page_thumbnail($c, $links_html)
     //$h .= '<p style="margin-left:14px;float:left;clear: both;display: block;">';
     $h .= '<p class="left_paragraph">';
     
-    $h .= '<a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'"><img src="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250" "=""></a>';
+    $h .= '<!--<a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'">--><img src="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250" "=""><!--</a>-->';
     
     
     $h .= $links_html;
