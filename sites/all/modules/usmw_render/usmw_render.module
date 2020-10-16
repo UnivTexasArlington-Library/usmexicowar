@@ -3494,7 +3494,9 @@ function standard_thumbnail($img, $link, $links_html)
     
     if($link)
     {
-        $h .= '<a href="'.media_prefix1($link).'"><img src="'.$img.'" align="left" alt="" width="250" "=""></a>';
+       // $h .= '<a href="'.media_prefix1($link).'"><img src="'.$img.'" align="left" alt="" width="250" "=""></a>';
+	   // removed link to image, because we want them to go to PDF or other link instead
+	   $h .= '<img src="'.$img.'" align="left" alt="" width="250" "="">';
     }
     
     else{
