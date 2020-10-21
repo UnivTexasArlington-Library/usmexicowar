@@ -780,7 +780,8 @@ function render_content($c, $type)
             $h .= usmw_field_render(reformat_date_published($c->field_content_pub_date[LANGUAGE_NONE][0]['value']), 'Publication Date');
         }
         
-        $h .= usmw_field_wrap($c->field_content_publication_place, 'Publication Place');
+        /* THIS APPEARS NOT TO BE WORKING, maybe because it was changed from pub_place, a text field, to publication_place, a term reference field */
+		$h .= usmw_field_wrap($c->field_content_publication_place, 'Publication Place');
         
         $h .= usmw_field_wrap($c->field_content_publisher, 'Publisher');
     
@@ -1064,7 +1065,7 @@ function render_item_publication_information($content)
     {
         $h .= '&nbsp; Published by:' . usmw_validator($content->field_content_publisher);
     }
-    
+   /* THIS APPEARS NOT TO BE WORKING, maybe because it was changed from pub_place, a text field, to publication_place, a term reference field
     if(usmw_validator($content->field_content_publication_place) != "")
     {
         if($h != '') 
@@ -1073,7 +1074,7 @@ function render_item_publication_information($content)
         }
         $h .= usmw_validator($content->field_content_publication_place);
     }
-    
+    */
     if(reformat_date_published($content->field_content_pub_date[LANGUAGE_NONE][0]['value']) != "")
     {
        if($h != '') 
