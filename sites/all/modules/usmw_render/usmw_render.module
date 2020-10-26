@@ -639,19 +639,6 @@ function render_content($c, $type)
     
     
     $links = '';
-/*	
-    if($c->field_content_pdf[LANGUAGE_NONE][0]['value'] != '')
-    {
-   
-        $links .= '<br><strong><a href="'.media_prefix1($c->field_content_pdf[LANGUAGE_NONE][0]['value']).'" class="view">View PDF</a></strong>';
-    }
-	
-	if($c->field_content_image_url[LANGUAGE_NONE][0]['value'] != '')
-	{
-        $links .= '<br><strong><a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" class="view">View Image</a></strong>';
-    } 
-*/	
-	
 		
 	//if there's a PDF, print a link, otherwise if there's an image, print an image link
 	    
@@ -668,10 +655,6 @@ function render_content($c, $type)
 	}
 
 	
-	
-	
-	
-    
     if($c->field_content_translation[LANGUAGE_NONE][0]['value'] != '')
     {
         $links .= '<br><strong><a href="'.site_root().'/translation?content_id='.$c->field_content_id[LANGUAGE_NONE][0]['value'].'" class="view">View Translation</a></strong>';
@@ -3510,11 +3493,6 @@ function standard_content_page_thumbnail($c, $links_html)
 	}
 		else {$h .= '<img src="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250" "="">';}
 	}
-	
-	
- /*   
-    $h .= '<!--<a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'">--><img src="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250" "=""><!--</a>-->';
-   */ 
     
     $h .= $links_html;
     
