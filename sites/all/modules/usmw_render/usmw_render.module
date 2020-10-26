@@ -3527,7 +3527,7 @@ function standard_content_page_thumbnail($c, $links_html)
     
 }
 
-function standard_thumbnail($img, $link, $links_html, $c)
+function standard_thumbnail($img, $link, $links_html)
 {  
     
 
@@ -3538,7 +3538,7 @@ function standard_thumbnail($img, $link, $links_html, $c)
     $h .= '<p class="left_paragraph">';
  
 
-/*
+
     if($link)
     {
        // $h .= '<a href="'.media_prefix1($link).'"><img src="'.$img.'" align="left" alt="" width="250" "=""></a>';
@@ -3549,28 +3549,6 @@ function standard_thumbnail($img, $link, $links_html, $c)
     else{
         $h .= '<img src="'.$img.'" align="left" alt="" width="250" "="">';
     }
-*/	
-	
-	
-	
-	//if there's a PDF, link to it, otherwise if there's an image, link to it
-	    
-		  if($c->field_content_pdf[LANGUAGE_NONE][0]['value'] != '')
-    {
-        //$links .= '<br><strong><a href="'.media_prefix1($c->field_content_pdf[LANGUAGE_NONE][0]['value']).'" class="view">View PDF</a></strong>';
-        $h .= '<a href="'.media_prefix1($c->field_content_pdf[LANGUAGE_NONE][0]['value']).'"><img src="'.$img.'" align="left" alt="" width="250" "=""></a>';
-    }
-	else {
-		if($c->field_content_image_url[LANGUAGE_NONE][0]['value'] != '')
-	{
-		 //$links .= '<br><strong><a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" class="view">View Image</a></strong>';
-		 $h .= '<img src="'.$img.'" align="left" alt="" width="250" "="">';
-	}
-	}
-	
-	
-	
-	
 	
 	
 	
