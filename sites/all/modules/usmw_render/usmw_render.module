@@ -3496,7 +3496,7 @@ function standard_content_page_thumbnail($c, $links_html)
 	
 	
 	
-		//if there's a PDF, link to it, otherwise if there's an image, link to it
+		//if there's a PDF, link to it, otherwise if there's an image, link to it and if there's no image, no link
 	      if($c->field_content_pdf[LANGUAGE_NONE][0]['value'] != '')
     {
         //$links .= '<br><strong><a href="'.media_prefix1($c->field_content_pdf[LANGUAGE_NONE][0]['value']).'" class="view">View PDF</a></strong>';
@@ -3506,8 +3506,9 @@ function standard_content_page_thumbnail($c, $links_html)
 		if($c->field_content_image_url[LANGUAGE_NONE][0]['value'] != '')
 	{
 		 //$links .= '<br><strong><a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" class="view">View Image</a></strong>';
-		 $h .= '<img src="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250" "="">';
+		 $h .= '<a href="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'"><img src="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250" "=""></a>';
 	}
+		else {$h .= '<img src="'.media_prefix1($c->field_content_image_url[LANGUAGE_NONE][0]['value']).'" align="left" alt="" width="250" "="">';}
 	}
 	
 	
