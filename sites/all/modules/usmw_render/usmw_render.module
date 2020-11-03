@@ -4398,7 +4398,7 @@ function usmw_get_menu_element($type, $id)
 
 
 function site_root()
-{ return 'https://library.uta.edu/usmexicowar'; }
+{ return 'https://library-test.uta.edu/usmexicowar'; }
 
 
 
