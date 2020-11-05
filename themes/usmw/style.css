@@ -1786,7 +1786,7 @@ ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > 
 #topic-description {flex-basis:66%;flex-grow:1;}  
 #topic-pics {padding:0 30px;margin:20px 0;} 
 #topic-pics .topic-pic img {width:100%;max-width:260px;border:0;} 
-#topic-pics .topic-pic img:first-of-type {margin:20px 0 0 0;} 
+#topic-pics img:first-of-type {margin:20px 0 0 0;} 
 #topic-pics .pic-caption {max-width:260px;}
 
 
