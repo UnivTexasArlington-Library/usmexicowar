@@ -1782,6 +1782,7 @@ ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > 
 
 /************************************************/
 /* STYLES FOR NEW TOPIC LAYOUTS - AJL */
+.module-wrap {margin-left:15px;}
 #topic-container{display:flex;flex-wrap:wrap;}  
 #topic-description {flex-basis:66%;flex-grow:1;}  
 #topic-pics {padding:0 30px;margin:0 0 20px 0;} 
