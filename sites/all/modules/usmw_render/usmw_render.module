@@ -1006,7 +1006,7 @@ function render_topic_intro($major_topic)
     $topics = node_load_multiple($nids);
     
     //$h .= json_encode($topics);
-    
+    $h .= '<div id="thumbnails">';
     forEach($topics as $t)
     {
         
@@ -1041,7 +1041,7 @@ function render_topic_intro($major_topic)
         
     }
     
-    
+    $h .= '</div> <!-- end div.thumbnails -->';
     $h .= '</div>';
     
     $h .= usmw_footer_seal();
@@ -1527,7 +1527,7 @@ function render_format()
     $h .= '</div>';
     
     $h .= '<div>';
-    $h .= '<div id="thumbnails">';
+    
     //$contents = sort_contents($contents, $sorting);
     
     $count = 0;
@@ -1583,7 +1583,7 @@ function render_format()
         
         $count++;
     }
-    $h .= '</div> <!-- end div.thumbnails -->';
+    
     $h .= '</div>';
     
     
