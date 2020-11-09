@@ -1527,7 +1527,7 @@ function render_format()
     $h .= '</div>';
     
     $h .= '<div>';
-    
+    $h .= '<div id="thumbnails">';
     //$contents = sort_contents($contents, $sorting);
     
     $count = 0;
@@ -1575,6 +1575,7 @@ function render_format()
         
         $col3 = $date;
         
+		
         $h .= three_column($col1, $col2, $col3);
         
         
@@ -1582,7 +1583,7 @@ function render_format()
         
         $count++;
     }
-    
+    $h .= '</div> <!-- end div.thumbnails -->';
     $h .= '</div>';
     
     
@@ -4498,7 +4499,7 @@ function two_column($col1_content, $col2_content)
 function three_column($col1_content, $col2_content, $col3_content)
 {
     $h = '';
-	$h .= '<div id="thumbnails">';
+	
     $h .= '<div class="three_column_row">';
          
     $h .= '<div class="col1 center_wrapper">';
@@ -4514,7 +4515,7 @@ function three_column($col1_content, $col2_content, $col3_content)
     $h .= '</div>';
     
     $h .= '</div>';
-	$h .= '</div>';
+	
     
     return $h;
 }
