@@ -987,7 +987,7 @@ function render_topic_intro($major_topic)
     
     //breadcrumbs
     $h .= '<div class="breadcrumbs">';
-    $h .=  '<a href="'.site_root().'/topic">Major Topics</a> &gt' . $major_topic->label . ': Introduction';
+    $h .=  '<a href="'.site_root().'/topic">Topics</a> &gt' . $major_topic->label . ': Introduction';
     $h .= '</div>';
     
     $h .= '<div>';
@@ -2499,7 +2499,7 @@ function render_advanced_search()
     $h .= '<h3>Limit to:</h3><br>';
     
     $h .= '<div id="topicsform">';
-    $h .= '<p>Major Topics:</p>';
+    $h .= '<p>Topics:</p>';
     
     $t = get_major_topics();
     $count = 0;
@@ -3039,7 +3039,7 @@ function render_home_page()
     $h .= '<br>';
     
     $h .= '<div id="home_page_panels" class="bottom-third">';
-    $h .= '<h3>Major Topics</h3>';
+    $h .= '<h3>Topics</h3>';
     
     
     $h .= '<div id="topics" ></div>';
@@ -3781,7 +3781,7 @@ function topic_breadcrumbs($t, $topic_format_id, $content_id, $bio_id)
     
     $h .= '<div class="breadcrumbs">';
     
-    $h .= '<a href="'.site_root().'/topic">Major Topics</a> &gt';
+    $h .= '<a href="'.site_root().'/topic">Topics</a> &gt';
     
     if($major_topic)
     {
@@ -4050,7 +4050,7 @@ function get_menu_edits()
     $m = get_major_topics();
     
     $major_topics = new stdClass();
-    $major_topics->label = 'Major Topics';
+    $major_topics->label = 'Topics';
     $major_topics->append = 'About';
     $major_topics->mobile_override = site_root() . '/#home_page_panels'; //override link
     $major_topics->leaf = [];
@@ -4087,7 +4087,7 @@ function get_menu_edits()
     {
         $new_leaf = new stdClass();
         $new_leaf->label = $topic->label;
-        $new_leaf->parent = 'Major Topics';
+        $new_leaf->parent = 'Topics';
         $new_leaf->leaf = [];
         
         
