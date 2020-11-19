@@ -4050,7 +4050,7 @@ function get_menu_edits()
     $m = get_major_topics();
     
     $major_topics = new stdClass();
-    $major_topics->label = 'Topics';
+    $major_topics->label = 'Major Topics';
     $major_topics->append = 'About';
     $major_topics->mobile_override = site_root() . '/#home_page_panels'; //override link
     $major_topics->leaf = [];
