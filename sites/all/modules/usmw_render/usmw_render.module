@@ -5283,6 +5283,6 @@ function usmw_validator($field)
 
 
 //is this a good idea or?
-error_reporting(0); 
+//error_reporting(0); 
 
 
