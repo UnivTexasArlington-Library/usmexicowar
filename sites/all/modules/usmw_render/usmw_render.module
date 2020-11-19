@@ -4087,7 +4087,7 @@ function get_menu_edits()
     {
         $new_leaf = new stdClass();
         $new_leaf->label = $topic->label;
-        $new_leaf->parent = 'Topics';
+        $new_leaf->parent = 'Major Topics';
         $new_leaf->leaf = [];
         
         
