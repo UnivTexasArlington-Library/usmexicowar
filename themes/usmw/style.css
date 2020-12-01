@@ -1732,6 +1732,7 @@ ol.tree	li {
 #sidebar-first {
 	float:left;
 	margin-left: 25px;
+	max-width:300px;
 }
 	
 td.views-field.active {
