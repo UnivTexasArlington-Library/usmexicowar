@@ -1756,12 +1756,14 @@ a.facetapi-checkbox {
 .block-facetapi h2 {
 	font-size:14px !important;
 }
+/*removed to let facet text wrap 
 ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > li {
   max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+*/
 
 /************************************************/
 /* STYLES FOR HOME PAGE TOPIC LINKS  - AJL */
