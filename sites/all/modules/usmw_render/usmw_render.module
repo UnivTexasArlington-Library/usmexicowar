@@ -3999,8 +3999,10 @@ function get_menu_edits()
     
 	array_push($browse->leaf, new usmw_menu_element( 'node/3483', 'Featured Collections')); //add "Featured Collections" manually to Browse menu (ajl) 
     array_push($browse->leaf, usmw_get_menu_element('format', 1)); //essays
-    array_push($browse->leaf, usmw_get_menu_element('format', 8)); //images
-    array_push($browse->leaf, usmw_get_menu_element('format', 9)); //maps
+    //array_push($browse->leaf, usmw_get_menu_element('format', 8)); //remove images link
+	array_push($browse->leaf, new usmw_menu_element( 'images', 'Images')); //add "Images" manually to Browse menu (ajl) 
+    //array_push($browse->leaf, usmw_get_menu_element('format', 9)); //remove maps link
+	array_push($browse->leaf, new usmw_menu_element( 'maps', 'Maps')); //add "Maps" manually to Browse menu (ajl) 
     
     
     //people
