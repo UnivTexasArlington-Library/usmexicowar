@@ -49,7 +49,7 @@ src: url(fonts/silentreaction.ttf);
 #home-timeline img {
 	border: none;
 }
-#timeline_conversion_wrap a {color: #ccb58a;}
+#page-content > div > #timeline_conversion_wrap a {color: #ccb58a;}
 
 #home-content {
 	background-image: url(images/home-columns-background.png);
