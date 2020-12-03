@@ -50,6 +50,7 @@ src: url(fonts/silentreaction.ttf);
 	border: none;
 }
 #page-content > div > #timeline_conversion_wrap a {color: #ccb58a;}
+#page-content > div > #timeline_conversion_wrap a.close {color: #152c47;}
 
 #home-content {
 	background-image: url(images/home-columns-background.png);
