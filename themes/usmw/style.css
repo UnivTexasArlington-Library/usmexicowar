@@ -1734,11 +1734,11 @@ ol.tree	li {
 	margin-left: 25px;
 	max-width:300px;
 }
-	
+
+td.views-field {min-width:90px;}	
 td.views-field.active {
 	background-color:#f5f2e9;
 }
-
 th.views-field {
 	vertical-align:bottom;
 }
