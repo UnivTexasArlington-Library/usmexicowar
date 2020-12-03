@@ -49,7 +49,7 @@ src: url(fonts/silentreaction.ttf);
 #home-timeline img {
 	border: none;
 }
-
+#home-timeline a {color: #ccb58a;}
 
 #home-content {
 	background-image: url(images/home-columns-background.png);
