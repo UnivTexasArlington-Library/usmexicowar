@@ -1792,4 +1792,32 @@ ul#facetapi-facet-search-apidefault-node-index-block-field-content-collection > 
 #topic-pics .topic-pic img {width:100%;max-width:260px;border:0;margin:20px 0 0 0;} 
 #topic-pics .pic-caption {max-width:260px;}
 
+/*************************************************/
+/* FOR RESTART BUTTON ON ANIMATED MAPS; styles for button position are in individual pages - AJL */
+#restart-button {
+	box-shadow:inset 0px 1px 0px 0px #a6827e;
+	background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+	background-color:#7d5d3b;
+	border-radius:3px;
+	border:1px solid #54381e;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d3534;
+}
+#restart-button:hover {
+	background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+	background-color:#634b30;
+}
+@media all and (max-width: 360px) {
+  #restart-button {
+	max-width:150px;
+	font-size:11px;
+  }
+}
+
 
