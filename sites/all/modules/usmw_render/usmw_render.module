@@ -4040,11 +4040,22 @@ function get_menu_edits()
     }
     
    
+   //maps
+    $browse_maps = new stdClass();
+    $browse_maps->label = 'Maps';
+    $browse_maps->parent = 'Browse';
+    $browse_maps->append = 'Essays';
+    $browse_maps->leaf = [];
+    
+    array_push($browse_maps->leaf, new usmw_menu_element( 'maps', 'Printed Maps'));
+    array_push($browse_maps->leaf, new usmw_menu_element( 'animated-maps', 'Animated Maps'));
+	
     
     //order is important (parents before children)
     array_push($edits, $browse);
     array_push($edits, $browse_documents);
     array_push($edits, $browse_people);
+	array_push($edits, $browse_maps);
     
     // -- end Browse menu
     
