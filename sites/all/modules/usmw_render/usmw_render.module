@@ -4002,7 +4002,7 @@ function get_menu_edits()
     //array_push($browse->leaf, usmw_get_menu_element('format', 8)); //remove images link
 	array_push($browse->leaf, new usmw_menu_element( 'images', 'Images')); //add "Images" manually to Browse menu (ajl) 
     //array_push($browse->leaf, usmw_get_menu_element('format', 9)); //remove maps link
-	array_push($browse->leaf, new usmw_menu_element( 'maps', 'Maps')); //add "Maps" manually to Browse menu (ajl) 
+	//array_push($browse->leaf, new usmw_menu_element( 'maps', 'Maps')); //add "Maps" manually to Browse menu; now added below with submenu (ajl) 
     
     
     //people
@@ -4044,7 +4044,7 @@ function get_menu_edits()
     $browse_maps = new stdClass();
     $browse_maps->label = 'Maps';
     $browse_maps->parent = 'Browse';
-    $browse_maps->append = 'Essays';
+    $browse_maps->append = 'Images';
     $browse_maps->leaf = [];
     
     array_push($browse_maps->leaf, new usmw_menu_element( 'maps', 'Printed Maps'));
